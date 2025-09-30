@@ -30,9 +30,15 @@ const ForfeitsSection = () => {
       title: "PASS MANÈGES",
       price: "79 DH",
       features: [
-        "Accès presque illimité aux manèges du parc",
-        "Attractions familiales adaptées à tous les âges",
-        "Différentes attractions pour tous"
+        "Dream land",
+        "Helicopter",
+        "Spider montagne",
+        "Appolo",
+        "Orient express",
+        "Trampolin",
+        "Sky glider",
+        "Looping bike",
+        "Waikiki"
       ],
       color: "from-yellow-400 to-amber-500",
       highlight: false
@@ -53,7 +59,6 @@ const ForfeitsSection = () => {
       title: "PASS VR CLUB",
       price: "69 DH",
       features: [
-
         "Courses de voitures AR",
         "Simulations immersives",
         "Jeux d'équipe en VR"
@@ -87,7 +92,7 @@ const ForfeitsSection = () => {
       id="forfaits" 
       className="relative py-20 overflow-hidden"
       style={{
-        backgroundImage: "url('light-grain.jpg'), linear-gradient(to bottom, #fef3c7, #fed7aa)",
+        backgroundImage: "url(/light-grain.jpg), linear-gradient(to bottom, #fef3c7, #fed7aa)",
         backgroundSize: "cover, cover",
         backgroundPosition: "center, center",
         backgroundRepeat: "no-repeat, no-repeat",
@@ -124,10 +129,10 @@ const ForfeitsSection = () => {
             transition={{ duration: 0.5, type: "spring" }}
             className="font-dinosaur text-5xl md:text-6xl mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent drop-shadow-sm"
           >
-            FORFAIT ET TICKETS
+             TICKETS
           </motion.h2>
           <div className="mx-auto h-1 w-40 bg-gradient-to-r from-orange-600 to-yellow-400 mb-6"></div>
-          <p className="font-montserrat text-amber-900 text-lg max-w-2xl mx-auto">
+          <p className="font-montserrat text-amber-900 text-lg mx-auto">
             Choisissez le pass qui vous convient pour une expérience préhistorique inoubliable au cœur de Palooza Park
           </p>
         </motion.div>
@@ -137,17 +142,17 @@ const ForfeitsSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:items-start"
         >
           {passes.map((pass, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              className={`rounded-2xl overflow-hidden ${pass.highlight ? 'border-2 border-yellow-500 md:-translate-y-4' : 'border border-orange-200'} bg-white/80 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-300/30 transition-all`}
+              className={`rounded-2xl overflow-hidden ${pass.highlight ? 'border-2 border-yellow-500 md:-translate-y-4' : 'border border-orange-200'} bg-white/80 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-300/30 transition-all flex flex-col h-full`}
             >
               <div className={`h-3 w-full bg-gradient-to-r ${pass.color}`}></div>
-              <div className="p-8 relative">
+              <div className="p-8 relative flex-1 flex flex-col">
                 {/* Decorative element */}
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-amber-100 rounded-full opacity-20"></div>
                 
@@ -158,17 +163,17 @@ const ForfeitsSection = () => {
                   {pass.price}
                   <span className="text-sm text-amber-700/70 ml-1">/personne</span>
                 </div>
-                <ul className="space-y-3 mb-4 relative z-10">
+                <ul className={`${index === 0 ? 'space-y-2' : 'space-y-4'} mb-4 relative z-10 flex-1`}>
                   {pass.features.map((feature, i) => (
                     <motion.li 
                       key={i}
                       initial={{ opacity: 0, x: -10 }}
                       animate={hasAnimated ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: 0.5 + (i * 0.1) }}
-                      className="flex items-center text-amber-800 font-montserrat"
+                      className={`flex items-center text-amber-800 font-montserrat ${index !== 0 ? 'py-2' : ''}`}
                     >
-                      <div className="mr-2 w-5 h-5 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs">✓</div>
-                      {feature}
+                      <div className="mr-2 w-5 h-5 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs flex-shrink-0">✓</div>
+                      <span className={index !== 0 ? 'text-base' : 'text-sm'}>{feature}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -177,19 +182,7 @@ const ForfeitsSection = () => {
           ))}
         </motion.div>
 
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={hasAnimated ? { opacity: 1 } : {}}
-          transition={{ delay: 1.2, duration: 0.8 }}
-          className="text-center mt-16 font-montserrat text-amber-800 max-w-2xl mx-auto"
-        >
-          <div className="bg-white/40 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-orange-200">
-            <p className="text-amber-900">
-              Réservez en avance et bénéficiez d'une réduction de 15% ! Les billets sont également disponibles sur place.
-            </p>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

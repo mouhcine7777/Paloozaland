@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const AttractionsHeroSection = () => {
+const ContactHeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -16,13 +16,13 @@ const AttractionsHeroSection = () => {
         <div 
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/attractions.jpg')`
-                    }}
+            backgroundImage: `url('/bg2.jpg')`
+          }}
         />
         {/* Black shadow overlay */}
         <div className="absolute inset-0 bg-black/60" />
-        {/* Orange gradient overlay on top of black shadow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-orange-900/30 to-transparent" />
+        {/* Blue gradient overlay on top of black shadow */}
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent" />
       </div>
 
       {/* Hero Content */}
@@ -34,10 +34,10 @@ const AttractionsHeroSection = () => {
           className="text-center w-full max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-5xl"
         >
           <motion.h1 
-            className="mb-4 sm:mb-6 font-dinosaur text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight drop-shadow-lg bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent leading-tight"
+            className="mb-4 sm:mb-6 font-dinosaur text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight drop-shadow-lg bg-gradient-to-r from-yellow-400 via-orange-500 to-teal-600 bg-clip-text text-transparent leading-tight"
           >
-            NOS
-            <span className="bg-gradient-to-r from-amber-300 to-yellow-500 bg-clip-text text-transparent"> ATTRACTIONS</span>
+            CONTACTEZ
+            <span className="bg-gradient-to-r from-amber-300 to-yellow-500 bg-clip-text text-transparent"> NOUS</span>
           </motion.h1>
 
           <motion.div
@@ -53,7 +53,7 @@ const AttractionsHeroSection = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mb-3 sm:mb-4 font-dinosaur text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent drop-shadow-md"
           >
-            Plongez dans l’Ère des Dinosaures
+            Nous Sommes À Votre Écoute
           </motion.h2>
 
           <motion.p
@@ -62,7 +62,8 @@ const AttractionsHeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="mb-6 sm:mb-8 font-montserrat text-sm sm:text-base md:text-lg text-white/90 drop-shadow-md max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed"
           >
-Revivez la préhistoire : sensations, explorations et découvertes au cœur d’un monde disparu depuis 65 millions d’années.
+            Des questions sur votre visite ? Besoin d'informations pour organiser un événement ?
+            Notre équipe est là pour vous accompagner dans votre aventure préhistorique.
           </motion.p>
 
           {/* Feature highlights */}
@@ -73,16 +74,16 @@ Revivez la préhistoire : sensations, explorations et découvertes au cœur d’
             className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm md:text-base"
           >
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">16+ Attractions</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Expériences 3D</span>
+              <span className="text-white font-montserrat whitespace-nowrap">Réponse Rapide</span>
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Sensations Fortes</span>
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full flex-shrink-0"></div>
+              <span className="text-white font-montserrat whitespace-nowrap">Service Personnalisé</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-pink-400 rounded-full flex-shrink-0"></div>
+              <span className="text-white font-montserrat whitespace-nowrap">Support 7j/7</span>
             </div>
           </motion.div>
 
@@ -99,4 +100,4 @@ Revivez la préhistoire : sensations, explorations et découvertes au cœur d’
   );
 };
 
-export default AttractionsHeroSection;
+export default ContactHeroSection;

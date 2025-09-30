@@ -28,7 +28,7 @@ const StickyNavbar = () => {
     { name: "Accueil", href: "/" },
     { name: "Attractions", href: "/attractions" },
     { name: "Horaires", href: "/nos-horaires" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "/contact" }
   ];
 
   return (
@@ -79,10 +79,10 @@ const StickyNavbar = () => {
               ))}
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                 <Link 
-                  href="#tickets"
+                  href="tel:+212661635095"
                   className="ml-4 px-6 py-2 bg-gradient-to-r from-orange-600 to-amber-500 text-white rounded-full font-montserrat font-bold text-sm shadow-lg"
                 >
-                  RÉSERVER
+                  Appelez-nous 
                 </Link>
               </motion.div>
             </div>

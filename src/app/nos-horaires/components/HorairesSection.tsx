@@ -72,9 +72,6 @@ const TimingSection = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mx-auto h-1 bg-gradient-to-r from-orange-600 to-yellow-400 mb-6"
         />
-          <p className="font-montserrat text-amber-900 text-lg max-w-2xl mx-auto">
-          Profitez de nos nouveaux horaires étendus pour une expérience inoubliable chez Palooza Park.
-          </p>
       </div>
 
       {/* Main content area with flex layout */}
@@ -142,7 +139,7 @@ const TimingSection = () => {
                         Ouvert tous les jours • 16h00 à 00h00
                       </p>
                       <p className="font-montserrat text-sm text-amber-700 mt-1 opacity-80">
-                        7 jours sur 7 pour votre plaisir !
+                        7/7 pour votre plaisir !
                       </p>
                     </div>
                   </div>
@@ -191,7 +188,7 @@ const TimingSection = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-montserrat font-bold text-lg text-amber-900 mb-2">Note importante :</h4>
+                    <h4 className="font-montserrat font-bold text-lg text-amber-900 mb-2">Recommandation</h4>
                     <p className="font-montserrat text-amber-900">
                       Le parc accepte les dernières entrées jusqu'à 23h00. Nous vous recommandons d'arriver au moins 2-3 heures avant la fermeture pour profiter pleinement de votre expérience.
                     </p>

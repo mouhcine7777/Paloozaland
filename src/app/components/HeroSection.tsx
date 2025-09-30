@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -52,33 +53,27 @@ const HeroSection = () => {
           <motion.h2
             className="mb-6 font-dinosaur text-2xl md:text-3xl bg-gradient-to-r from-yellow-200 to-amber-400 bg-clip-text text-transparent drop-shadow-md"
           >
-            Le Premier Parc à Thème des Dinosaures au Maroc
+            Le Premier Parc à Thème des Dinosaures <br></br>au Maroc
           </motion.h2>
 
           <motion.p
             className="mb-8 font-montserrat text-lg text-white drop-shadow-md"
           >
-            Plongez dans une aventure préhistorique incroyable avec des attractions à couper le souffle, 
-            une piscine délirante et un musée captivant. Tout un monde de merveilles vous attend!
+Vivez une aventure préhistorique époustouflante avec attractions sensationnelles, piscine spectaculaire et musée fascinant !
           </motion.p>
 
           <motion.div
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="rounded-full bg-gradient-to-r from-orange-600 to-amber-500 px-8 py-3 font-montserrat font-bold text-white shadow-lg"
-            >
-              DÉCOUVRIR
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="rounded-full border-2 border-white bg-transparent px-8 py-3 font-montserrat font-bold text-white shadow-lg"
-            >
-              EN SAVOIR PLUS
-            </motion.button>
+            <Link href="/attractions" passHref>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="rounded-full bg-gradient-to-r from-orange-600 to-amber-500 px-8 py-3 font-montserrat font-bold text-white shadow-lg"
+              >
+                DÉCOUVRIR
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Simple Scroll Indicator */}

@@ -60,7 +60,7 @@ const ForfeitsSection = () => {
       price: "69 DH",
       features: [
         "Courses de voitures AR",
-        "Simulations immersives",
+        "Cyber truck",
         "Jeux d'équipe en VR"
       ],
       color: "from-orange-500 to-red-600",

@@ -45,14 +45,14 @@ const GallerySection = () => {
     },
     {
       id: 2,
-      src: "/gallery/image2.jpg",
+      src: "/gallery/kontiki.jpg",
       alt: "Aventure dinosaure 2",
       title: "Dinosaures Animés",
       description: "Rencontrez nos créatures réalistes"
     },
     {
       id: 3,
-      src: "/gallery/image3.jpg",
+      src: "/gallery/cybertruck.jpg",
       alt: "Aventure dinosaure 3",
       title: "Aire de Jeux",
       description: "Amusement garanti pour tous les âges"
@@ -87,7 +87,7 @@ const GallerySection = () => {
     },
     {
       id: 8,
-      src: "/gallery/image8.jpg",
+      src: "/gallery/arcarracing.jpg",
       alt: "Aventure dinosaure 8",
       title: "Expérience VIP",
       description: "Moments inoubliables en famille"

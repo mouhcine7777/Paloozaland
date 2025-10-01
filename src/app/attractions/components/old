@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const AttractionsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -9,126 +10,112 @@ const AttractionsSection = () => {
       name: "Accrobranche",
       category: "adventure",
       description: "Parcours dans les arbres avec des défis acrobatiques pour toute la famille",
-      image: "/gallery/acrrobranche.jpg"
+      icon: "🌳"
     },
     {
       id: 2,
       name: "Le Jump Tower",
       category: "extreme",
       description: "Chute libre depuis 40 mètres de hauteur pour les plus courageux",
-      image: "/gallery/image4.jpg"
+      icon: "🗼"
     },
     {
       id: 3,
       name: "Le Monster Tower",
       category: "extreme",
       description: "Tour de 35 mètres avec vue panoramique et descente spectaculaire",
-      image: "/gallery/image5.jpg"
+      icon: "👹"
     },
     {
       id: 4,
       name: "Zipline",
       category: "adventure",
       description: "Tyrolienne géante au-dessus de la vallée des dinosaures",
-      image: "/gallery/image6.jpg"
+      icon: "🪂"
     },
     {
       id: 5,
       name: "Dino Valley",
       category: "family",
       description: "Voyage immersif dans la vallée des dinosaures avec animatroniques",
-      image: "/gallery/dinovalley.jpg"
+      icon: "🦕"
     },
     {
       id: 6,
-      name: "Loco Loco",
+      name: "Bateau Pirate",
       category: "family",
       description: "Balancier géant pour des sensations aquatiques inoubliables",
-      image: "/gallery/locoloco.jpg"
+      icon: "🏴‍☠️"
     },
     {
       id: 7,
-      name: "Coco Piloto",
+      name: "Spinning Coaster",
       category: "thrill",
       description: "Montagnes russes avec wagons tournoyants et virages serrés",
-      image: "/gallery/cocopiloto.jpg"
+      icon: "🎢"
     },
     {
       id: 8,
-      name: "Cinema 6D",
+      name: "Tagada",
       category: "thrill",
       description: "Manège disco avec rebonds et rotations au rythme de la musique",
-      image: "/gallery/6d.jpg"
+      icon: "🎪"
     },
     {
       id: 9,
       name: "Spider Mountain",
       category: "thrill",
       description: "Araignée géante qui vous élève et vous fait tournoyer",
-      image: "/gallery/spider.jpg"
+      icon: "🕷️"
     },
     {
       id: 10,
       name: "Dream Land & Mini Hélicoptère",
       category: "family",
       description: "Espace dédié aux plus jeunes avec mini hélicoptères et attractions douces",
-      image: "/gallery/dreamland.jpg"
+      icon: "🚁"
     },
     {
       id: 11,
       name: "Apollo",
       category: "extreme",
       description: "Fusée spatiale avec accélération et apesanteur simulée",
-      image: "/gallery/apollo.jpg"
+      icon: "🚀"
     },
     {
       id: 12,
       name: "Orient Express",
       category: "thrill",
       description: "Train à grande vitesse à travers tunnels et ponts suspendus",
-      image: "/gallery/express.jpg"
+      icon: "🚂"
     },
     {
       id: 13,
       name: "Sky Glider",
       category: "adventure",
       description: "Télésiège panoramique avec vue imprenable sur tout le parc",
-      image: "/gallery/glider.jpg"
+      icon: "🚠"
     },
     {
       id: 14,
       name: "Waikiki",
       category: "family",
       description: "Attraction aquatique avec toboggans et jeux d'eau tropicaux",
-      image: "/gallery/image9.jpg"
+      icon: "🌊"
     },
     {
       id: 15,
       name: "Looping Bike",
       category: "extreme",
       description: "Vélo acrobatique sur circuit avec looping et figures aériennes",
-      image: "/gallery/loopingbike.jpg"
+      icon: "🚴"
     },
     {
       id: 16,
-      name: "Trampoline",
-      category: "extreme",
-      description: "Vélo acrobatique sur circuit avec looping et figures aériennes",
-      image: "/gallery/trampoline.jpg"
-    },
-    {
-      id: 17,
-      name: "Cyber Truck",
+      name: "Jeux d'Équipe en VR",
       category: "tech",
       description: "Expérience de réalité virtuelle collaborative dans l'univers des dinosaures",
-      image: "/gallery/cybertruck.jpg"
-    },
-    {
-      id: 18,
-      name: "Ar Car Racing",
-      category: "tech",
-      description: "Expérience de réalité virtuelle collaborative dans l'univers des dinosaures",
-      image: "/gallery/arcarracing.jpg"
+      icon: "🥽"
     }
   ];
 
@@ -150,17 +137,37 @@ const AttractionsSection = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-dinosaur text-5xl md:text-6xl mb-6 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 bg-clip-text text-transparent">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="font-dinosaur text-5xl md:text-6xl mb-6 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 bg-clip-text text-transparent"
+          >
             L'Odyssée Préhistorique
-          </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
-          <p className="font-montserrat text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            18 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
-          </p>
+          </motion.h2>
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "100px" }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="h-1 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6"
+          />
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-montserrat text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
+            16 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
+          </motion.p>
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex flex-wrap justify-center gap-3 mb-12"
+        >
           {categories.map((category) => (
             <button
               key={category.id}
@@ -174,58 +181,65 @@ const AttractionsSection = () => {
               {category.name}
             </button>
           ))}
-        </div>
+        </motion.div>
 
-        {/* Attractions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredAttractions.map((attraction) => (
-            <div
+        {/* Attractions List */}
+        <motion.div layout className="space-y-4">
+          {filteredAttractions.map((attraction, index) => (
+            <motion.div
               key={attraction.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-200"
+              layout
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-200"
             >
-              {/* Image */}
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src={attraction.image}
-                  alt={attraction.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row md:items-center gap-6">
+                  {/* Icon & Title */}
+                  <div className="flex items-center gap-4 md:min-w-0 md:flex-1">
+                    <div className="text-4xl md:text-5xl">{attraction.icon}</div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-dinosaur text-2xl md:text-3xl text-gray-800 mb-2 group-hover:text-orange-600 transition-colors duration-300">
+                        {attraction.name}
+                      </h3>
+                      <p className="font-montserrat text-gray-600 leading-relaxed">
+                        {attraction.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="font-dinosaur text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">
-                  {attraction.name}
-                </h3>
-                <p className="font-montserrat text-gray-600 leading-relaxed">
-                  {attraction.description}
-                </p>
-              </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Statistics */}
-        <div className="mt-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-12 text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-12 text-white"
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">18</div>
+              <div className="text-3xl md:text-4xl font-dinosaur mb-2">16</div>
               <div className="font-montserrat text-orange-100">Attractions</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">4</div>
+              <div className="text-3xl md:text-4xl font-dinosaur mb-2">4</div>
               <div className="font-montserrat text-orange-100">Niveaux de Sensations</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">∞</div>
+              <div className="text-3xl md:text-4xl font-dinosaur mb-2">∞</div>
               <div className="font-montserrat text-orange-100">Souvenirs</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">100%</div>
+              <div className="text-3xl md:text-4xl font-dinosaur mb-2">100%</div>
               <div className="font-montserrat text-orange-100">Plaisir Garanti</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

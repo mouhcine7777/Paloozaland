@@ -65,7 +65,7 @@ const AttractionsSection = () => {
       name: "Spider Mountain",
       category: "thrill",
       description: "Araignée géante qui vous élève et vous fait tournoyer",
-      image: "/gallery/spider.jpg"
+      image: "/gallery/spidermountain.jpg"
     },
     {
       id: 10,

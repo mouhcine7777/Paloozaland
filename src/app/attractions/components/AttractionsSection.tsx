@@ -8,126 +8,108 @@ const AttractionsSection = () => {
       id: 1,
       name: "Accrobranche",
       category: "adventure",
-      description: "Parcours dans les arbres avec des défis acrobatiques pour toute la famille",
       image: "/gallery/acrrobranche.jpg"
     },
     {
       id: 2,
       name: "Le Jump Tower",
       category: "extreme",
-      description: "Chute libre depuis 40 mètres de hauteur pour les plus courageux",
       image: "/gallery/image4.jpg"
     },
     {
       id: 3,
       name: "Le Monster Tower",
       category: "extreme",
-      description: "Tour de 35 mètres avec vue panoramique et descente spectaculaire",
       image: "/gallery/image5.jpg"
     },
     {
       id: 4,
       name: "Zipline",
       category: "adventure",
-      description: "Tyrolienne géante au-dessus de la vallée des dinosaures",
       image: "/gallery/image6.jpg"
     },
     {
       id: 5,
       name: "Dino Valley",
       category: "family",
-      description: "Voyage immersif dans la vallée des dinosaures avec animatroniques",
       image: "/gallery/dinovalley.jpg"
     },
     {
       id: 6,
       name: "Loco Loco",
       category: "family",
-      description: "Balancier géant pour des sensations aquatiques inoubliables",
       image: "/gallery/locoloco.jpg"
     },
     {
       id: 7,
       name: "Coco Piloto",
       category: "thrill",
-      description: "Montagnes russes avec wagons tournoyants et virages serrés",
       image: "/gallery/cocopiloto.jpg"
     },
     {
       id: 8,
       name: "Cinema 6D",
       category: "thrill",
-      description: "Manège disco avec rebonds et rotations au rythme de la musique",
       image: "/gallery/6d.jpg"
     },
     {
       id: 9,
       name: "Spider Mountain",
       category: "thrill",
-      description: "Araignée géante qui vous élève et vous fait tournoyer",
       image: "/gallery/spidermountain.jpg"
     },
     {
       id: 10,
       name: "Dream Land & Mini Hélicoptère",
       category: "family",
-      description: "Espace dédié aux plus jeunes avec mini hélicoptères et attractions douces",
       image: "/gallery/dreamland.jpg"
     },
     {
       id: 11,
       name: "Apollo",
       category: "extreme",
-      description: "Fusée spatiale avec accélération et apesanteur simulée",
       image: "/gallery/apollo.jpg"
     },
     {
       id: 12,
       name: "Orient Express",
       category: "thrill",
-      description: "Train à grande vitesse à travers tunnels et ponts suspendus",
       image: "/gallery/express.jpg"
     },
     {
       id: 13,
       name: "Sky Glider",
       category: "adventure",
-      description: "Télésiège panoramique avec vue imprenable sur tout le parc",
       image: "/gallery/glider.jpg"
     },
     {
       id: 14,
       name: "Waikiki",
       category: "family",
-      description: "Attraction aquatique avec toboggans et jeux d'eau tropicaux",
       image: "/gallery/image9.jpg"
     },
     {
       id: 15,
       name: "Looping Bike",
       category: "extreme",
-      description: "Vélo acrobatique sur circuit avec looping et figures aériennes",
       image: "/gallery/loopingbike.jpg"
     },
     {
       id: 16,
       name: "Trampoline",
       category: "extreme",
-      description: "Vélo acrobatique sur circuit avec looping et figures aériennes",
       image: "/gallery/trampoline.jpg"
     },
     {
       id: 17,
       name: "Cyber Truck",
       category: "tech",
-      description: "Expérience de réalité virtuelle collaborative dans l'univers des dinosaures",
       image: "/gallery/cybertruck.jpg"
     },
     {
       id: 18,
       name: "Ar Car Racing",
       category: "tech",
-      description: "Expérience de réalité virtuelle collaborative dans l'univers des dinosaures",
       image: "/gallery/arcarracing.jpg"
     }
   ];
@@ -181,25 +163,23 @@ const AttractionsSection = () => {
           {filteredAttractions.map((attraction) => (
             <div
               key={attraction.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-200"
+              className="group rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              {/* Image */}
-              <div className="h-64 overflow-hidden">
+              {/* Image with Overlay Text */}
+              <div className="relative h-96 overflow-hidden">
                 <img 
                   src={attraction.image}
                   alt={attraction.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-              </div>
-              
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="font-dinosaur text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">
-                  {attraction.name}
-                </h3>
-                <p className="font-montserrat text-gray-600 leading-relaxed">
-                  {attraction.description}
-                </p>
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                {/* Title overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="font-dinosaur text-3xl font-bold bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-lg">
+                    {attraction.name}
+                  </h3>
+                </div>
               </div>
             </div>
           ))}

@@ -1,126 +1,124 @@
 import { useState } from 'react';
 
 const AttractionsSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('toutes');
 
   const attractions = [
     {
       id: 1,
-      name: "Accrobranche",
-      category: "adventure",
-      description: "Grimpez, surmontez des défis et amusez-vous dans les arbres avec notre Parcours Accrobranches !",
-      image: "/gallery/acrrobranche.jpg"
-    },
-    {
-      id: 2,
-      name: "Le Jump Tower",
-      category: "extreme",
-      description: "Lâchez prise et ressentez l’adrénaline de la chute libre avec le Free Fall !",
-      image: "/gallery/image4.jpg"
-    },
-    {
-      id: 3,
-      name: "Le Monster Tower",
-      category: "extreme",
-      description: "Atteignez les sommets et relevez le défi de la Monster Tower !",
-      image: "/gallery/image5.jpg"
-    },
-    {
-      id: 4,
-      name: "Zipline",
-      category: "adventure",
-      description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline !",
-      image: "/gallery/image6.jpg"
-    },
-    {
-      id: 5,
-      name: "Spider Mountain",
-      category: "thrill",
-      description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante !",
-      image: "/gallery/spidermountain.jpg"
-    },
-    {
-      id: 6,
-      name: "Dream Land & Mini Hélicoptère",
-      category: "family",
+      name: "Dreamland Helicopter",
+      category: "maneges",
       description: "Envolez-vous à bord du Dreamland Helicopter pour une expérience enchantée !",
       image: "/gallery/dreamland.jpg"
     },
     {
-      id: 7,
+      id: 2,
+      name: "Spider Montagne",
+      category: "maneges",
+      description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante !",
+      image: "/gallery/spidermountain.jpg"
+    },
+    {
+      id: 3,
       name: "Apollo",
-      category: "extreme",
+      category: "maneges",
       description: "Installez-vous confortablement et laissez Apollo vous emmener dans une expérience vertigineuse !",
       image: "/gallery/apollo.jpg"
     },
     {
-      id: 8,
+      id: 4,
       name: "Orient Express",
-      category: "thrill",
-      description: "Montez à bord de l’Orient Express pour un voyage riche en sensations et en découvertes !",
+      category: "maneges",
+      description: "Montez à bord de l'Orient Express pour un voyage riche en sensations et en découvertes !",
       image: "/gallery/express.jpg"
     },
     {
-      id: 9,
-      name: "Sky Glider",
-      category: "adventure",
-      description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider !",
-      image: "/gallery/glider.jpg"
-    },
-    {
-      id: 10,
-      name: "Waikiki",
-      category: "family",
-      description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki !",
-      image: "/gallery/image9.jpg"
-    },
-    {
-      id: 11,
-      name: "Looping Bike",
-      category: "extreme",
-      description: "Préparez-vous à des sensations fortes avec le Looping Bike qui vous fera tourner la tête !",
-      image: "/gallery/loopingbike.jpg"
-    },
-    {
-      id: 12,
+      id: 5,
       name: "Trampoline",
-      category: "extreme",
+      category: "maneges",
       description: "Sautez, tournez et éclatez-vous sur le Trampoline comme jamais auparavant !",
       image: "/gallery/trampoline.jpg"
     },
     {
-      id: 13,
+      id: 6,
+      name: "Sky Glider",
+      category: "maneges",
+      description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider !",
+      image: "/gallery/glider.jpg"
+    },
+    {
+      id: 7,
+      name: "Looping Bike",
+      category: "maneges",
+      description: "Préparez-vous à des sensations fortes avec le Looping Bike qui vous fera tourner la tête !",
+      image: "/gallery/loopingbike.jpg"
+    },
+    {
+      id: 8,
+      name: "Waikiki",
+      category: "maneges",
+      description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki !",
+      image: "/gallery/image9.jpg"
+    },
+    {
+      id: 9,
       name: "Cyber Truck",
-      category: "tech",
+      category: "aventures",
       description: "Grimpez à bord du Cyber Truck et vivez une aventure électrisante comme jamais !",
       image: "/gallery/cybertruck.jpg"
     },
     {
+      id: 10,
+      name: "Zipline",
+      category: "aventures",
+      description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline !",
+      image: "/gallery/image6.jpg"
+    },
+    {
+      id: 11,
+      name: "Free Fall",
+      category: "aventures",
+      description: "Lâchez prise et ressentez l'adrénaline de la chute libre avec le Free Fall !",
+      image: "/gallery/image4.jpg"
+    },
+    {
+      id: 12,
+      name: "Parcours Accrobranches",
+      category: "aventures",
+      description: "Grimpez, surmontez des défis et amusez-vous dans les arbres avec notre Parcours Accrobranches !",
+      image: "/gallery/acrrobranche.jpg"
+    },
+    {
+      id: 13,
+      name: "Monster Tower",
+      category: "aventures",
+      description: "Atteignez les sommets et relevez le défi de la Monster Tower !",
+      image: "/gallery/image5.jpg"
+    },
+    {
       id: 14,
-      name: "Ar Car Racing",
-      category: "tech",
-      description: "Prenez le volant et plongez dans la course ultime avec l’AR Car Racing !",
+      name: "AR Car Racing",
+      category: "vr",
+      description: "Prenez le volant et plongez dans la course ultime avec l'AR Car Racing !",
       image: "/gallery/arcarracing.jpg"
     },
     {
       id: 15,
-      name: "Vr Team",
-      category: "tech",
+      name: "VR Team",
+      category: "vr",
       description: "Enfilez vos casques et embarquez pour une aventure immersive avec VR Team !",
       image: "/gallery/vrteam.jpg"
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'Toutes', color: 'from-orange-500 to-amber-500' },
-    { id: 'family', name: 'Familial', color: 'from-green-500 to-emerald-500' },
-    { id: 'adventure', name: 'Aventure', color: 'from-blue-500 to-cyan-500' },
-    { id: 'thrill', name: 'Sensations', color: 'from-purple-500 to-pink-500' },
-    { id: 'extreme', name: 'Extrême', color: 'from-red-500 to-orange-600' },
-    { id: 'tech', name: 'Tech', color: 'from-indigo-500 to-purple-600' }
+    { id: 'toutes', name: 'Toutes', color: 'from-orange-500 to-amber-500' },
+    { id: 'maneges', name: 'Pass Manèges', color: 'from-blue-500 to-cyan-500' },
+    { id: 'aventures', name: 'Pass Aventures', color: 'from-green-500 to-emerald-500' },
+    { id: 'vr', name: 'Pass VR', color: 'from-purple-500 to-pink-500' }
   ];
 
-  const filteredAttractions = selectedCategory === 'all' 
+  const filteredAttractions = selectedCategory === 'toutes' 
     ? attractions 
     : attractions.filter(attraction => attraction.category === selectedCategory);
 
@@ -134,7 +132,7 @@ const AttractionsSection = () => {
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
           <p className="font-montserrat text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            16 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
+            15 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
           </p>
         </div>
 
@@ -188,12 +186,12 @@ const AttractionsSection = () => {
         <div className="mt-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-12 text-white">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">16</div>
+              <div className="text-4xl md:text-5xl font-dinosaur mb-2">15</div>
               <div className="font-montserrat text-orange-100">Attractions</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">4</div>
-              <div className="font-montserrat text-orange-100">Niveaux de Sensations</div>
+              <div className="text-4xl md:text-5xl font-dinosaur mb-2">3</div>
+              <div className="font-montserrat text-orange-100">Pass Différents</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-dinosaur mb-2">∞</div>

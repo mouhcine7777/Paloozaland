@@ -6,14 +6,14 @@ const AttractionsSection = () => {
   const attractions = [
     {
       id: 1,
-      name: "Parcours Accrobranches",
+      name: "Accrobranche",
       category: "adventure",
       description: "Parcours dans les arbres avec des défis acrobatiques pour toute la famille",
       image: "/gallery/acrrobranche.jpg"
     },
     {
       id: 2,
-      name: "Free Fall",
+      name: "Le Jump Tower",
       category: "extreme",
       description: "Chute libre depuis 40 mètres de hauteur pour les plus courageux",
       image: "/gallery/image4.jpg"

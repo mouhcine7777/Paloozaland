@@ -8,127 +8,106 @@ const AttractionsSection = () => {
       id: 1,
       name: "Accrobranche",
       category: "adventure",
-      description: "Parcours dans les arbres avec des défis acrobatiques pour toute la famille",
+      description: "Grimpez, surmontez des défis et amusez-vous dans les arbres avec notre Parcours Accrobranches !",
       image: "/gallery/acrrobranche.jpg"
     },
     {
       id: 2,
       name: "Le Jump Tower",
       category: "extreme",
-      description: "Chute libre depuis 40 mètres de hauteur pour les plus courageux",
+      description: "Lâchez prise et ressentez l’adrénaline de la chute libre avec le Free Fall !",
       image: "/gallery/image4.jpg"
     },
     {
       id: 3,
       name: "Le Monster Tower",
       category: "extreme",
-      description: "Tour de 35 mètres avec vue panoramique et descente spectaculaire",
+      description: "Atteignez les sommets et relevez le défi de la Monster Tower !",
       image: "/gallery/image5.jpg"
     },
     {
       id: 4,
       name: "Zipline",
       category: "adventure",
-      description: "Tyrolienne géante au-dessus de la vallée des dinosaures",
+      description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline !",
       image: "/gallery/image6.jpg"
     },
     {
       id: 5,
-      name: "Dino Valley",
-      category: "family",
-      description: "Voyage immersif dans la vallée des dinosaures avec animatroniques",
-      image: "/gallery/dinovalley.jpg"
-    },
-    {
-      id: 6,
-      name: "Loco Loco",
-      category: "family",
-      description: "Balancier géant pour des sensations aquatiques inoubliables",
-      image: "/gallery/locoloco.jpg"
-    },
-    {
-      id: 7,
-      name: "Coco Piloto",
-      category: "thrill",
-      description: "Montagnes russes avec wagons tournoyants et virages serrés",
-      image: "/gallery/cocopiloto.jpg"
-    },
-    {
-      id: 8,
-      name: "Cinema 6D",
-      category: "thrill",
-      description: "Manège disco avec rebonds et rotations au rythme de la musique",
-      image: "/gallery/6d.jpg"
-    },
-    {
-      id: 9,
       name: "Spider Mountain",
       category: "thrill",
-      description: "Araignée géante qui vous élève et vous fait tournoyer",
+      description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante !",
       image: "/gallery/spidermountain.jpg"
     },
     {
-      id: 10,
+      id: 6,
       name: "Dream Land & Mini Hélicoptère",
       category: "family",
-      description: "Espace dédié aux plus jeunes avec mini hélicoptères et attractions douces",
+      description: "Envolez-vous à bord du Dreamland Helicopter pour une expérience enchantée !",
       image: "/gallery/dreamland.jpg"
     },
     {
-      id: 11,
+      id: 7,
       name: "Apollo",
       category: "extreme",
-      description: "Fusée spatiale avec accélération et apesanteur simulée",
+      description: "Installez-vous confortablement et laissez Apollo vous emmener dans une expérience vertigineuse !",
       image: "/gallery/apollo.jpg"
     },
     {
-      id: 12,
+      id: 8,
       name: "Orient Express",
       category: "thrill",
-      description: "Train à grande vitesse à travers tunnels et ponts suspendus",
+      description: "Montez à bord de l’Orient Express pour un voyage riche en sensations et en découvertes !",
       image: "/gallery/express.jpg"
     },
     {
-      id: 13,
+      id: 9,
       name: "Sky Glider",
       category: "adventure",
-      description: "Télésiège panoramique avec vue imprenable sur tout le parc",
+      description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider !",
       image: "/gallery/glider.jpg"
     },
     {
-      id: 14,
+      id: 10,
       name: "Waikiki",
       category: "family",
-      description: "Attraction aquatique avec toboggans et jeux d'eau tropicaux",
+      description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki !",
       image: "/gallery/image9.jpg"
     },
     {
-      id: 15,
+      id: 11,
       name: "Looping Bike",
       category: "extreme",
-      description: "Vélo acrobatique sur circuit avec looping et figures aériennes",
+      description: "Préparez-vous à des sensations fortes avec le Looping Bike qui vous fera tourner la tête !",
       image: "/gallery/loopingbike.jpg"
     },
     {
-      id: 16,
+      id: 12,
       name: "Trampoline",
       category: "extreme",
-      description: "Vélo acrobatique sur circuit avec looping et figures aériennes",
+      description: "Sautez, tournez et éclatez-vous sur le Trampoline comme jamais auparavant !",
       image: "/gallery/trampoline.jpg"
     },
     {
-      id: 17,
+      id: 13,
       name: "Cyber Truck",
       category: "tech",
-      description: "Expérience de réalité virtuelle collaborative dans l'univers des dinosaures",
+      description: "Grimpez à bord du Cyber Truck et vivez une aventure électrisante comme jamais !",
       image: "/gallery/cybertruck.jpg"
     },
     {
-      id: 18,
+      id: 14,
       name: "Ar Car Racing",
       category: "tech",
-      description: "Expérience de réalité virtuelle collaborative dans l'univers des dinosaures",
+      description: "Prenez le volant et plongez dans la course ultime avec l’AR Car Racing !",
       image: "/gallery/arcarracing.jpg"
+    },
+    {
+      id: 15,
+      name: "Vr Team",
+      category: "tech",
+      description: "Enfilez vos casques et embarquez pour une aventure immersive avec VR Team !",
+      image: "/gallery/vrteam.jpg"
     }
   ];
 
@@ -155,7 +134,7 @@ const AttractionsSection = () => {
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
           <p className="font-montserrat text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            18 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
+            16 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
           </p>
         </div>
 
@@ -209,7 +188,7 @@ const AttractionsSection = () => {
         <div className="mt-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-12 text-white">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">18</div>
+              <div className="text-4xl md:text-5xl font-dinosaur mb-2">16</div>
               <div className="font-montserrat text-orange-100">Attractions</div>
             </div>
             <div>

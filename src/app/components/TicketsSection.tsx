@@ -30,12 +30,11 @@ const ForfeitsSection = () => {
       title: "PASS MANÈGES",
       price: "79 DH",
       features: [
-        "Dream land",
-        "Helicopter",
+        "Dream land Helicopter",
         "Spider montagne",
         "Appolo",
         "Orient express",
-        "Trampolin",
+        "Trampoline",
         "Sky glider",
         "Looping bike",
         "Waikiki"
@@ -50,7 +49,8 @@ const ForfeitsSection = () => {
         "Accrobranche",
         "Le jump tower",
         "Le monster tower",
-        "Zipline"
+        "Zipline",
+        "Free fall"
       ],
       color: "from-amber-500 to-orange-600",
       highlight: true

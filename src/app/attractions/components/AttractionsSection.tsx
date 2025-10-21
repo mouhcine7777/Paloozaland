@@ -8,105 +8,105 @@ const AttractionsSection = () => {
       id: 1,
       name: "Dreamland Helicopter",
       category: "maneges",
-      description: "Envolez-vous à bord du Dreamland Helicopter pour une expérience enchantée !",
+      description: "Envolez-vous à bord du Dreamland Helicopter pour une expérience enchantée!",
       image: "/gallery/dreamland.jpg"
     },
     {
       id: 2,
       name: "Spider Montagne",
       category: "maneges",
-      description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante !",
+      description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante!",
       image: "/gallery/spidermountain.jpg"
     },
     {
       id: 3,
       name: "Apollo",
       category: "maneges",
-      description: "Installez-vous confortablement et laissez Apollo vous emmener dans une expérience vertigineuse !",
+      description: "Installez-vous confortablement et laissez Apollo vous emmener dans une expérience vertigineuse!",
       image: "/gallery/apollo.jpg"
     },
     {
       id: 4,
       name: "Orient Express",
       category: "maneges",
-      description: "Montez à bord de l'Orient Express pour un voyage riche en sensations et en découvertes !",
+      description: "Montez à bord de l'Orient Express pour un voyage riche en sensations et en découvertes!",
       image: "/gallery/express.jpg"
     },
     {
       id: 5,
       name: "Trampoline",
       category: "maneges",
-      description: "Sautez, tournez et éclatez-vous sur le Trampoline comme jamais auparavant !",
+      description: "Sautez, tournez et éclatez-vous sur le Trampoline comme jamais auparavant!",
       image: "/gallery/trampoline.jpg"
     },
     {
       id: 6,
       name: "Sky Glider",
       category: "maneges",
-      description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider !",
+      description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider!",
       image: "/gallery/glider.jpg"
     },
     {
       id: 7,
       name: "Looping Bike",
       category: "maneges",
-      description: "Préparez-vous à des sensations fortes avec le Looping Bike qui vous fera tourner la tête !",
+      description: "Préparez-vous à des sensations fortes avec le Looping Bike qui vous fera tourner la tête!",
       image: "/gallery/loopingbike.jpg"
     },
     {
       id: 8,
       name: "Waikiki",
       category: "maneges",
-      description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki !",
+      description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki!",
       image: "/gallery/image9.jpg"
     },
     {
       id: 9,
       name: "Cyber Truck",
-      category: "aventures",
-      description: "Grimpez à bord du Cyber Truck et vivez une aventure électrisante comme jamais !",
+      category: "vr",
+      description: "Grimpez à bord du Cyber Truck et vivez une aventure électrisante comme jamais!",
       image: "/gallery/cybertruck.jpg"
     },
     {
       id: 10,
       name: "Zipline",
       category: "aventures",
-      description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline !",
+      description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline!",
       image: "/gallery/image6.jpg"
     },
     {
       id: 11,
       name: "Free Fall",
       category: "aventures",
-      description: "Lâchez prise et ressentez l'adrénaline de la chute libre avec le Free Fall !",
+      description: "Lâchez prise et ressentez l'adrénaline de la chute libre avec le Free Fall!",
       image: "/gallery/image4.jpg"
     },
     {
       id: 12,
       name: "Parcours Accrobranches",
       category: "aventures",
-      description: "Grimpez, surmontez des défis et amusez-vous dans les arbres avec notre Parcours Accrobranches !",
+      description: "Grimpez, surmontez des défis et amusez-vous dans les arbres avec notre Parcours Accrobranches!",
       image: "/gallery/acrrobranche.jpg"
     },
     {
       id: 13,
       name: "Monster Tower",
       category: "aventures",
-      description: "Atteignez les sommets et relevez le défi de la Monster Tower !",
+      description: "Atteignez les sommets et relevez le défi de la Monster Tower!",
       image: "/gallery/image5.jpg"
     },
     {
       id: 14,
       name: "AR Car Racing",
       category: "vr",
-      description: "Prenez le volant et plongez dans la course ultime avec l'AR Car Racing !",
+      description: "Prenez le volant et plongez dans la course ultime avec l'AR Car Racing!",
       image: "/gallery/arcarracing.jpg"
     },
     {
       id: 15,
       name: "VR Team",
       category: "vr",
-      description: "Enfilez vos casques et embarquez pour une aventure immersive avec VR Team !",
+      description: "Enfilez vos casques et embarquez pour une aventure immersive avec VR Team!",
       image: "/gallery/vrteam.jpg"
     }
   ];

@@ -168,7 +168,7 @@ const TimingSection = () => {
                     <div className="flex-grow">
                       <h4 className="font-montserrat font-bold text-lg text-cyan-800">Horaires Piscine</h4>
                       <p className="font-dinosaur text-2xl bg-gradient-to-r from-cyan-600 via-blue-600 to-teal-600 bg-clip-text text-transparent">
-                        Ouvert tous les jours • 10h00 à 19h00
+                      Ouverture du 15 Juin au 30 Septembre
                       </p>
                       <p className="font-montserrat text-sm text-cyan-700 mt-1 opacity-80">
                         Plongez dans l'aventure aquatique !
@@ -188,9 +188,9 @@ const TimingSection = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-montserrat font-bold text-lg text-amber-900 mb-2">Recommandation</h4>
+                    <h4 className="font-montserrat font-bold text-lg text-amber-900 mb-2">À noter</h4>
                     <p className="font-montserrat text-amber-900">
-                      Le parc accepte les dernières entrées jusqu'à 23h00. Nous vous recommandons d'arriver au moins 2-3 heures avant la fermeture pour profiter pleinement de votre expérience.
+                      Le parc accepte les dernières entrées jusqu'à 21h00. Nous vous recommandons d'arriver au moins 2-3 heures avant la fermeture pour profiter pleinement de votre expérience.
                     </p>
                   </div>
                 </div>

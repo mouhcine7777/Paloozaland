@@ -40,64 +40,64 @@ const GallerySection = () => {
       id: 1,
       src: "/gallery/image1.jpg",
       alt: "Aventure dinosaure 1",
-      title: "Monde Jurassique",
-      description: "Explorez notre incroyable monde préhistorique"
+      title: "Piscines & Détente",
+      description: "Plongez, relaxez, profitez du soleil."
     },
     {
       id: 2,
       src: "/gallery/kontiki.jpg",
       alt: "Aventure dinosaure 2",
-      title: "Dinosaures Animés",
-      description: "Rencontrez nos créatures réalistes"
+      title: "Dino Ride",
+      description: "Sensations fortes au cœur du Jurassic."
     },
     {
       id: 3,
       src: "/gallery/cybertruck.jpg",
       alt: "Aventure dinosaure 3",
-      title: "Aire de Jeux",
-      description: "Amusement garanti pour tous les âges"
+      title: "Simulateur 4D",
+      description: "Vivez l’aventure comme si vous y étiez."
     },
     {
       id: 4,
       src: "/gallery/image4.jpg",
       alt: "Aventure dinosaure 4",
-      title: "Parcours Aventure",
-      description: "Défis et découvertes passionnants"
+      title: "Jump Tower",
+      description: "Défis, adrénaline et fun en plein air."
     },
     {
       id: 5,
       src: "/gallery/image5.jpg",
       alt: "Aventure dinosaure 5",
-      title: "Espace Éducatif",
-      description: "Apprenez tout sur l'ère des dinosaures"
+      title: "Monster Tower",
+      description: "Vue à 360° sur le royaume des dinos."
     },
     {
       id: 6,
       src: "/gallery/image6.jpg",
       alt: "Aventure dinosaure 6",
-      title: "Spectacles Live",
-      description: "Shows interactifs et divertissants"
+      title: "Tyrolienne Géante",
+      description: "Suspense et adrénaline en hauteur."
     },
     {
       id: 7,
       src: "/gallery/image7.jpg",
       alt: "Aventure dinosaure 7",
-      title: "Zone Fouilles",
-      description: "Devenez paléontologue d'un jour"
+      title: "Family Coaster",
+      description: "Le frisson accessible à tous les âges."
     },
     {
       id: 8,
       src: "/gallery/arcarracing.jpg",
       alt: "Aventure dinosaure 8",
-      title: "Expérience VIP",
-      description: "Moments inoubliables en famille"
+      title: "Réalité Virtuelle",
+      description: "Des expériences VR immersives uniques."
     },
     {
         id: 9,
         src: "/gallery/image9.jpg",
         alt: "Aventure dinosaure 9",
-        title: "Expérience VIP",
-        description: "Moments inoubliables en famille"
+        title: "Jump Tower",
+        description: "Montez, respirez… et criez fort !"
       }
   ];
 

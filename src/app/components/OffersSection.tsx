@@ -15,8 +15,8 @@ const HalloweenSection = () => {
 
   const activities = [
     {
-      title: "Animations Quotidiennes",
-      description: "Des animations terrifiantes tout au long de la journée"
+      title: "Soirée Halloween 1er Novembre",
+      description: "Une soirée terrifiante avec DJ, animations et plein d'autres surprises !"
     },
     {
       title: "Spectacles Déambulatoires",
@@ -126,7 +126,7 @@ const HalloweenSection = () => {
             >
               {/* Halloween Title */}
               <motion.h2 
-                className="mb-3 md:mb-4 font-dinosaur text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight drop-shadow-2xl"
+                className="mb-3 md:mb-4 font-dinosaur text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-2xl"
                 style={{
                   background: 'linear-gradient(to right, #ff6b00, #ff8c00, #ffa500)',
                   WebkitBackgroundClip: 'text',
@@ -134,7 +134,7 @@ const HalloweenSection = () => {
                   backgroundClip: 'text'
                 }}
               >
-                HALLOWEEN
+                PROGRAMME HALLOWEEN
               </motion.h2>
 
               <motion.div
@@ -151,13 +151,13 @@ const HalloweenSection = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
-                className="mb-6 md:mb-8 font-dinosaur text-2xl sm:text-3xl md:text-4xl text-orange-400 drop-shadow-lg"
+                className="mb-4 md:mb-6 font-dinosaur text-xl sm:text-2xl md:text-3xl text-orange-400 drop-shadow-lg"
               >
-                ACTIVITÉS
+                Des activités terrifiantes pour tous les âges
               </motion.h3>
 
               {/* Activities List */}
-              <div className="space-y-4 sm:space-y-5 md:space-y-6">
+              <div className="space-y-3 sm:space-y-4 md:space-y-5">
                 {activities.map((activity, index) => (
                   <motion.div
                     key={index}
@@ -166,12 +166,12 @@ const HalloweenSection = () => {
                     transition={{ delay: 0.5 + index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ x: 10 }}
-                    className="bg-gradient-to-r from-orange-900/30 to-transparent backdrop-blur-sm border-l-4 border-orange-500 rounded-r-lg p-4 sm:p-5 shadow-lg hover:shadow-orange-500/20 transition-all"
+                    className="bg-gradient-to-r from-orange-900/30 to-transparent backdrop-blur-sm border-l-4 border-orange-500 rounded-r-lg p-3 sm:p-4 shadow-lg hover:shadow-orange-500/20 transition-all"
                   >
-                    <h4 className="mb-2 font-dinosaur text-lg sm:text-xl md:text-2xl text-orange-400">
+                    <h4 className="mb-1 font-dinosaur text-base sm:text-lg md:text-xl text-orange-400">
                       {activity.title}
                     </h4>
-                    <p className="font-montserrat text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed">
+                    <p className="font-montserrat text-xs sm:text-sm text-gray-300 leading-relaxed">
                       {activity.description}
                     </p>
                   </motion.div>

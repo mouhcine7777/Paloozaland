@@ -85,7 +85,7 @@ const HalloweenPopup = () => {
                     backgroundClip: 'text'
                   }}
                 >
-                  HALLOWEEN
+                  Halloween à Palooza Park
                 </motion.h2>
 
                 <motion.p
@@ -94,8 +94,8 @@ const HalloweenPopup = () => {
                   transition={{ delay: 0.3 }}
                   className="mb-6 font-montserrat text-gray-300 text-sm sm:text-base"
                 >
-                  Rejoignez-nous pour une expérience terrifiante !<br />
-                  Animations, spectacles et bien plus encore...
+                  Du 18 octobre au 9 novembre, Palooza Park se transforme pour Halloween !<br />
+                  Entre dinosaures illuminés, spectacles effrayants et ateliers maquillage, plongez dans une ambiance monstrueusement fun pour petits et grands.
                 </motion.p>
 
                 <motion.button

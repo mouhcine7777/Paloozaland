@@ -15,20 +15,24 @@ const HalloweenSection = () => {
 
   const activities = [
     {
-      title: "Soirée Halloween 1er Novembre",
-      description: "Une soirée terrifiante avec DJ, animations et plein d'autres surprises !"
+      title: "Soirée Spéciale Halloween – Samedi 1er novembre",
+      description: "Quand le soleil se couche à Marrakech, les dinosaures s'illuminent ! Soirée festive avec DJ, spectacles déambulatoires, danseurs, jongleurs et animations spéciales Halloween."
     },
     {
-      title: "Spectacles Déambulatoires",
-      description: "Rencontrez des créatures effrayantes dans tout le parc"
+      title: "Concours Photo #PaloozaHalloween",
+      description: "Et si votre maquillage ou déguisement devenait légendaire ? Prenez votre plus belle photo déguisée dans le parc et partagez-la sur Instagram avec le hashtag #PaloozaHalloween, en mentionnant @paloozaland. Les plus beaux clichés seront repartagés sur nos réseaux !"
     },
     {
       title: "Ateliers Maquillage",
-      description: "Transformez-vous en créature d'Halloween"
+      description: "Transformez-vous en vampire, sorcière ou petit monstre d'Halloween."
     },
     {
-      title: "Photobooth",
-      description: "Capturez vos moments les plus effrayants"
+      title: "Spectacles & Animations",
+      description: "Rencontrez des créatures effrayantes et profitez d'animations immersives dans tout le parc."
+    },
+    {
+      title: "Photobooth Halloween",
+      description: "Capturez vos moments les plus terrifiants avec vos proches !"
     }
   ];
 
@@ -126,7 +130,7 @@ const HalloweenSection = () => {
             >
               {/* Halloween Title */}
               <motion.h2 
-                className="mb-3 md:mb-4 font-dinosaur text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight drop-shadow-2xl"
+                className="mb-2 md:mb-3 font-dinosaur text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight drop-shadow-2xl"
                 style={{
                   background: 'linear-gradient(to right, #ff6b00, #ff8c00, #ffa500)',
                   WebkitBackgroundClip: 'text',
@@ -151,9 +155,9 @@ const HalloweenSection = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
-                className="mb-4 md:mb-6 font-dinosaur text-xl sm:text-2xl md:text-3xl text-orange-400 drop-shadow-lg"
+                className="mb-4 md:mb-6 font-dinosaur text-lg sm:text-xl md:text-2xl text-orange-400 drop-shadow-lg"
               >
-                Des activités terrifiantes pour tous les âges
+                Des activités terrifiantes pour tous les âges !
               </motion.h3>
 
               {/* Activities List */}

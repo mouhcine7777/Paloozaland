@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Background Image with Black Shadow Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bg2.jpg"
+          src="/bg4.jpg"
           alt="Palooza Park Background"
           fill
           priority

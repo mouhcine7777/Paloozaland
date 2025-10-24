@@ -38,3 +38,12 @@ body {
 .font-dinosaur {
   font-family: 'Dinosaur', sans-serif;
 }
+@font-face {
+  font-family: 'Halloween';
+  src: url('/font/Halloween.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-halloween {
+  font-family: 'Halloween', sans-serif;
+}

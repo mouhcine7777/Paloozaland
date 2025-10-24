@@ -5,7 +5,8 @@ import TicketsSection from "./components/TicketsSection";
 import TimingSection from "./components/TimingSection";
 import GallerySection from "./components/GallerySection";
 import FooterSection from "./components/FooterSection";
-
+import HalloweenPopup from "./components/HalloweenPopup";
+import OffersSection from "./components/OffersSection";
 
 
 export default function Home() {
@@ -13,12 +14,12 @@ export default function Home() {
     <main>
       <StickyNavbar />
       <HeroSection />
+      <OffersSection />
       <TicketsSection />
       <GallerySection />
       <TimingSection />
       <FooterSection />
+      <HalloweenPopup />
     </main>
   );
 }
-
-

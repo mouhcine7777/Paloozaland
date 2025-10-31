@@ -73,14 +73,6 @@ const HorairesHeroSection = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm md:text-base"
           >
-            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-cyan-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Spectacles Programmés</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-teal-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Horaires Flexibles</span>
-            </div>
           </motion.div>
 
           <motion.div

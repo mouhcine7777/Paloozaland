@@ -72,7 +72,7 @@ const TimingSection = () => {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mx-auto h-1 bg-gradient-to-r from-orange-600 to-yellow-400 mb-6"
         />
-          <p className="font-montserrat text-amber-900 text-lg max-w-2xl mx-auto">
+          <p className="font-montserrat text-amber-900 text-lg mx-auto">
           Profitez de nos nouveaux horaires étendus pour une expérience inoubliable chez Palooza Park.
           </p>
       </div>

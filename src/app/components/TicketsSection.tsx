@@ -129,7 +129,7 @@ const ForfeitsSection = () => {
             transition={{ duration: 0.5, type: "spring" }}
             className="font-dinosaur text-5xl md:text-6xl mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent drop-shadow-sm"
           >
-             TICKETS
+             BILLETERIES
           </motion.h2>
           <div className="mx-auto h-1 w-40 bg-gradient-to-r from-orange-600 to-yellow-400 mb-6"></div>
           <p className="font-montserrat text-amber-900 text-lg mx-auto">

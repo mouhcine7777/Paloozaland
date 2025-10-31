@@ -59,9 +59,7 @@ const HeroSection = () => {
           <motion.p
             className="mb-8 font-montserrat text-lg text-white drop-shadow-md"
           >
-Vivez une aventure préhistorique époustouflante avec attractions sensationnelles, piscine spectaculaire et musée fascinant !
-          </motion.p>
-
+Vivez une aventure préhistorique inoubliable au cœur de Marrakech, entre attractions palpitantes, décors spectaculaires et expériences pour toute la famille !</motion.p>
           <motion.div
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center"
           >

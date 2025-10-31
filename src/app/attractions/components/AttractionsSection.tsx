@@ -6,14 +6,14 @@ const AttractionsSection = () => {
   const attractions = [
     {
       id: 1,
-      name: "Dreamland Helicopter",
+      name: "Dream Land / Hélicoptére",
       category: "maneges",
       description: "Envolez-vous à bord du Dreamland Helicopter pour une expérience enchantée!",
       image: "/gallery/dreamland.jpg"
     },
     {
       id: 2,
-      name: "Spider Montagne",
+      name: "Spider Mountain",
       category: "maneges",
       description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante!",
       image: "/gallery/spidermountain.jpg"
@@ -86,7 +86,7 @@ const AttractionsSection = () => {
       name: "Parcours Accrobranches",
       category: "aventures",
       description: "Grimpez, surmontez des défis et amusez-vous dans les arbres avec notre Parcours Accrobranches!",
-      image: "/gallery/acrrobranche.jpg"
+      image: "/gallery/accrobranche.jpg"
     },
     {
       id: 13,
@@ -108,7 +108,57 @@ const AttractionsSection = () => {
       category: "vr",
       description: "Enfilez vos casques et embarquez pour une aventure immersive avec VR Team!",
       image: "/gallery/vrteam.jpg"
+    },
+    {
+      id: 16,
+      name: "Spiner Bumper",
+      category: "maneges",
+      description: "Entrez dans l’action ! Pilotez votre bateau et amusez-vous à éclabousser vos amis dans cette bataille aquatique pleine de rires!",
+      image: "/gallery/spinBumper.jpg"
+    },
+    {
+      id: 17,
+      name: "Cineme 6D",
+      category: "maneges",
+      description: "Vivez le cinéma comme jamais ! Des effets spéciaux, des vibrations et des sensations immersives dans une expérience 4D à couper le souffle.",
+      image: "/gallery/cinema4D.jpg"
+    },
+    {
+      id: 18,
+      name: "Dino Valley",
+      category: "maneges",
+      description: "Remontez le temps ! Explorez une vallée préhistorique peuplée de dinosaures géants et partez à l’aventure au cœur de la jungle.",
+      image: "/gallery/dinovalley.jpg"
+    },
+    {
+      id: 19,
+      name: "Kontiki",
+      category: "maneges",
+      description: "Accrochez-vous ! Le légendaire bateau Kontiki vous embarque pour une traversée pleine de rebondissements et de fous rires.",
+      image: "/gallery/kontiki.jpg"
+    },
+    {
+      id: 20,
+      name: "Crazy Cannon",
+      category: "maneges",
+      description: "Préparez-vous pour une aventure décoiffante ! Tourbillons, virages et vitesse dans ce manège au cœur du Far West.",
+      image: "/gallery/crazycanyon.jpg"
+    },
+    {
+      id: 21,
+      name: "Loco Loco",
+      category: "maneges",
+      description: "Prenez votre envol ! Devenez le capitaine de votre avion et survolez le parc dans une expérience amusante et familiale.",
+      image: "/gallery/locoloco.jpg"
+    },
+    {
+      id: 22,
+      name: "Coco Piloto",
+      category: "maneges",
+      description: "Un tour complètement fou ! Tournez, penchez, riez… cette attraction promet un maximum de fun et de sensations !",
+      image: "/gallery/cocopiloto.jpg"
     }
+
   ];
 
   const categories = [
@@ -132,7 +182,7 @@ const AttractionsSection = () => {
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
           <p className="font-montserrat text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            15 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
+            22 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
           </p>
         </div>
 
@@ -186,7 +236,7 @@ const AttractionsSection = () => {
         <div className="mt-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-12 text-white">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">15</div>
+              <div className="text-4xl md:text-5xl font-dinosaur mb-2">22</div>
               <div className="font-montserrat text-orange-100">Attractions</div>
             </div>
             <div>

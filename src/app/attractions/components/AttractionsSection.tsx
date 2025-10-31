@@ -118,7 +118,7 @@ const AttractionsSection = () => {
     },
     {
       id: 17,
-      name: "Cineme 6D",
+      name: "Cinema 6D",
       category: "maneges",
       description: "Vivez le cinéma comme jamais ! Des effets spéciaux, des vibrations et des sensations immersives dans une expérience 4D à couper le souffle.",
       image: "/gallery/cinema4D.jpg"

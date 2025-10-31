@@ -155,7 +155,7 @@ const GallerySection = () => {
           initial={{ opacity: 0 }}
           animate={hasAnimated ? { opacity: 1 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="font-montserrat text-amber-900 text-lg max-w-2xl mx-auto"
+          className="font-montserrat text-amber-900 text-lg mx-auto"
         >
           Découvrez l'univers magique de Palooza Park à travers ces moments inoubliables
         </motion.p>

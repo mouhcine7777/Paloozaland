@@ -28,6 +28,7 @@ const StickyNavbar = () => {
     { name: "Accueil", href: "/" },
     { name: "Attractions", href: "/attractions" },
     { name: "Horaires", href: "/nos-horaires" },
+    { name: "Nos Offres", href: "/offres" },
     { name: "Contact", href: "/contact" }
   ];
 

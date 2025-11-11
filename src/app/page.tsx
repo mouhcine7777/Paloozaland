@@ -14,12 +14,10 @@ export default function Home() {
     <main>
       <StickyNavbar />
       <HeroSection />
-      <OffersSection />
       <TicketsSection />
       <GallerySection />
       <TimingSection />
       <FooterSection />
-      <HalloweenPopup />
     </main>
   );
 }

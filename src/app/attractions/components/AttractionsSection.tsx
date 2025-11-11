@@ -225,8 +225,8 @@ const AttractionsSection = () => {
             L'Odyssée Préhistorique
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
-          <p className="font-montserrat text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            22 attractions exceptionnelles vous attendent dans l'univers préhistorique <br />de Palooza Park
+          <p className="font-montserrat text-xl text-gray-600 max-w-7xl mx-auto leading-relaxed">
+            22 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
           </p>
         </div>
 

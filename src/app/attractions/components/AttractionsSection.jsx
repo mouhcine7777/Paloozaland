@@ -74,7 +74,7 @@ const AttractionsSection = () => {
       name: "Zipline",
       category: "aventures",
       description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline!",
-      image: "/gallery/zipline.jpg",
+      image: "/gallery/ziplinee.jpg",
       heightRange: "140cm+"
     },
     {

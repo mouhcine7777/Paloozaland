@@ -50,7 +50,7 @@ const AttractionsSection = () => {
       name: "Sky Glider",
       category: "maneges",
       description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider!",
-      image: "/gallery/glider.jpg",
+      image: "/gallery/skyglider.jpg",
       heightRange: "110-140cm"
     },
     {
@@ -66,7 +66,7 @@ const AttractionsSection = () => {
       name: "Waikiki",
       category: "maneges",
       description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki!",
-      image: "/gallery/image9.jpg",
+      image: "/gallery/waikiki.jpg",
       heightRange: "130cm+"
     },
     {
@@ -74,7 +74,7 @@ const AttractionsSection = () => {
       name: "Zipline",
       category: "aventures",
       description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline!",
-      image: "/gallery/zipline.png",
+      image: "/gallery/zipline.jpg",
       heightRange: "140cm+"
     },
     {

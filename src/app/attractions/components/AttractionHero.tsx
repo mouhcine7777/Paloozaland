@@ -78,7 +78,7 @@ Revivez la préhistoire : sensations, explorations et découvertes au cœur d’
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Expériences 3D</span>
+              <span className="text-white font-montserrat whitespace-nowrap">Expériences 6D</span>
             </div>
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
               <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-400 rounded-full flex-shrink-0"></div>

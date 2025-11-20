@@ -229,7 +229,7 @@ const TimingSection = () => {
                     <div className="flex-grow">
                       <h4 className="font-montserrat font-bold text-lg text-red-800">Juillet – Août</h4>
                       <p className="font-dinosaur text-2xl bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600 bg-clip-text text-transparent">
-                        10h00 – Minuit
+                        10h00 – 00h00 
                       </p>
                       <p className="font-montserrat text-sm text-red-700 mt-1 opacity-80">
                         Horaires étendus pour l'été !
@@ -251,7 +251,7 @@ const TimingSection = () => {
                   <div>
                     <h4 className="font-montserrat font-bold text-lg text-amber-900 mb-2">À noter</h4>
                     <p className="font-montserrat text-amber-900">
-                      Nous vous recommandons d'arriver au moins 2-3 heures avant la fermeture pour profiter pleinement de votre expérience. Les horaires peuvent varier selon les périodes de vacances scolaires.
+                      Nous vous recommandons d'arriver au moins 2-3 heures avant la fermeture pour profiter pleinement de votre expérience.
                     </p>
                   </div>
                 </div>

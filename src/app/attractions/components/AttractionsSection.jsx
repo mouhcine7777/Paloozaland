@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Clock, Users, Ruler } from 'lucide-react';
+import { Ruler, Sparkles, Mountain, Gamepad2 } from 'lucide-react';
 
 const AttractionsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('toutes');
@@ -7,12 +7,10 @@ const AttractionsSection = () => {
   const attractions = [
     {
       id: 1,
-      name: "Dream Land / Hélicoptére",
+      name: "Dream Land / Hélicoptère",
       category: "maneges",
-      description: "Envolez-vous à bord du Dreamland Helicopter pour une expérience enchantée!",
+      description: "Envolez-vous à bord du Dreamland Hélicoptère pour une expérience enchantée!",
       image: "/gallery/dreamland.jpg",
-      waitTime: 10,
-      capacity: "2-5",
       heightRange: "110cm+"
     },
     {
@@ -21,8 +19,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Escaladez et explorez la Spider Montagne pour une aventure palpitante!",
       image: "/gallery/spidermountain.jpg",
-      waitTime: 10,
-      capacity: "2-5",
       heightRange: "120-150cm"
     },
     {
@@ -31,8 +27,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Installez-vous confortablement et laissez Apollo vous emmener dans une expérience vertigineuse!",
       image: "/gallery/apollo.jpg",
-      waitTime: 10,
-      capacity: "12-28",
       heightRange: "100-140cm"
     },
     {
@@ -41,8 +35,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Montez à bord de l'Orient Express pour un voyage riche en sensations et en découvertes!",
       image: "/gallery/express.jpg",
-      waitTime: 10,
-      capacity: "20-40",
       heightRange: "100-140cm"
     },
     {
@@ -51,7 +43,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Sautez, tournez et éclatez-vous sur le Trampoline comme jamais auparavant!",
       image: "/gallery/trampoline.jpg",
-      capacity: "2",
       heightRange: "110-140cm"
     },
     {
@@ -60,8 +51,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider!",
       image: "/gallery/glider.jpg",
-      waitTime: 10,
-      capacity: "2-5",
       heightRange: "110-140cm"
     },
     {
@@ -70,8 +59,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Préparez-vous à des sensations fortes avec le Looping Bike qui vous fera tourner la tête!",
       image: "/gallery/loopingbike.jpg",
-      waitTime: 10,
-      capacity: "2",
       heightRange: "150cm+"
     },
     {
@@ -80,8 +67,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Glissez et amusez-vous sans limites sur les vagues de Waikiki!",
       image: "/gallery/image9.jpg",
-      waitTime: 10,
-      capacity: "6-12",
       heightRange: "130cm+"
     },
     {
@@ -90,7 +75,6 @@ const AttractionsSection = () => {
       category: "aventures",
       description: "Foncez à toute allure et survolez le parc en toute liberté avec la Zipline!",
       image: "/gallery/image6.jpg",
-      capacity: "1-2",
       heightRange: "140cm+"
     },
     {
@@ -98,8 +82,7 @@ const AttractionsSection = () => {
       name: "Free Fall",
       category: "aventures",
       description: "Lâchez prise et ressentez l'adrénaline de la chute libre avec le Free Fall!",
-      image: "/gallery/image4.jpg",
-      capacity: "1-2",
+      image: "/gallery/jumptower.jpg",
       heightRange: "140cm+"
     },
     {
@@ -114,22 +97,21 @@ const AttractionsSection = () => {
       name: "Monster Tower",
       category: "aventures",
       description: "Atteignez les sommets et relevez le défi de la Monster Tower!",
-      image: "/gallery/image5.jpg",
-      capacity: "4-5",
+      image: "/gallery/monstertower.jpg",
       ageRange: "13 ans+"
     },
     {
       id: 13,
       name: "Spiner Bumper",
       category: "maneges",
-      description: "Entrez dans l'action ! Pilotez votre bateau et amusez-vous à éclabousser vos amis dans cette bataille aquatique pleine de rires!",
+      description: "Plongez dans l'amusement ! Montez à bord de votre bouée et éclaboussez vos amis dans une bataille aquatique pleine de fous rires!",
       image: "/gallery/spinBumper.jpg"
     },
     {
       id: 14,
       name: "Cinema 6D",
       category: "maneges",
-      description: "Vivez le cinéma comme jamais ! Des effets spéciaux, des vibrations et des sensations immersives dans une expérience 4D à couper le souffle.",
+      description: "Vivez le cinéma comme jamais ! Des effets spéciaux, des vibrations et des sensations immersives dans une expérience 6D à couper le souffle!",
       image: "/gallery/cinema4D.jpg"
     },
     {
@@ -138,8 +120,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Remontez le temps ! Explorez une vallée préhistorique peuplée de dinosaures géants et partez à l'aventure au cœur de la jungle.",
       image: "/gallery/dinovalley.jpg",
-      waitTime: 15,
-      capacity: "4-16",
       heightRange: "100-130cm"
     },
     {
@@ -148,8 +128,6 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Accrochez-vous ! Le légendaire bateau Kontiki vous embarque pour une traversée pleine de rebondissements et de fous rires.",
       image: "/gallery/kontiki.jpg",
-      waitTime: 10,
-      capacity: "12-24",
       heightRange: "100-140cm"
     },
     {
@@ -158,28 +136,22 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Préparez-vous pour une aventure décoiffante ! Tourbillons, virages et vitesse dans ce manège au cœur du Far West.",
       image: "/gallery/crazycanyon.jpg",
-      waitTime: 10,
-      capacity: "10-18",
       heightRange: "110-130cm"
     },
     {
       id: 18,
       name: "Loco Loco",
       category: "maneges",
-      description: "Prenez votre envol ! Devenez le capitaine de votre avion et survolez le parc dans une expérience amusante et familiale.",
+      description: "Préparez-vous au tournis ! Montez à bord et laissez-vous emporter par cette attraction tournante pleine de rires et de sensations. Un tour dynamique et amusant pour toute la famille !",
       image: "/gallery/locoloco.jpg",
-      waitTime: 10,
-      capacity: "6-12",
       heightRange: "100-120cm"
     },
     {
       id: 19,
       name: "Coco Piloto",
       category: "maneges",
-      description: "Un tour complètement fou ! Tournez, penchez, riez… cette attraction promet un maximum de fun et de sensations !",
+      description: "Un tour complètement fou ! Tournez, penchez, riez… cette attraction promet un maximum de fun et de sensations!",
       image: "/gallery/cocopiloto.jpg",
-      waitTime: 15,
-      capacity: "4-16",
       heightRange: "110-130cm"
     },
     {
@@ -206,11 +178,38 @@ const AttractionsSection = () => {
   ];
 
   const categories = [
-    { id: 'toutes', name: 'Toutes', color: 'from-orange-500 to-amber-500' },
-    { id: 'maneges', name: 'Pass Manèges', color: 'from-blue-500 to-cyan-500' },
-    { id: 'aventures', name: 'Pass Aventures', color: 'from-green-500 to-emerald-500' },
-    { id: 'vr', name: 'Pass VR', color: 'from-purple-500 to-pink-500' }
+    { id: 'toutes', name: 'Pass All Inclusive', color: 'from-orange-500 to-amber-500', icon: Sparkles },
+    { id: 'maneges', name: 'Pass Manèges', color: 'from-blue-500 to-cyan-500', icon: Sparkles },
+    { id: 'aventures', name: 'Pass Aventures', color: 'from-green-500 to-emerald-500', icon: Mountain },
+    { id: 'vr', name: 'Pass VR', color: 'from-purple-500 to-pink-500', icon: Gamepad2 }
   ];
+
+  const getCategoryInfo = (category) => {
+    const categoryMap = {
+      'maneges': { 
+        name: 'Pass Manèges', 
+        color: 'from-blue-500 to-cyan-500',
+        bgColor: 'bg-gradient-to-r from-blue-500 to-cyan-500',
+        textColor: 'text-blue-600',
+        icon: Sparkles
+      },
+      'aventures': { 
+        name: 'Pass Aventures', 
+        color: 'from-green-500 to-emerald-500',
+        bgColor: 'bg-gradient-to-r from-green-500 to-emerald-500',
+        textColor: 'text-green-600',
+        icon: Mountain
+      },
+      'vr': { 
+        name: 'Pass VR', 
+        color: 'from-purple-500 to-pink-500',
+        bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500',
+        textColor: 'text-purple-600',
+        icon: Gamepad2
+      }
+    };
+    return categoryMap[category];
+  };
 
   const filteredAttractions = selectedCategory === 'toutes' 
     ? attractions 
@@ -232,77 +231,80 @@ const AttractionsSection = () => {
 
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-montserrat font-bold transition-all duration-300 transform hover:scale-105 ${
-                selectedCategory === category.id 
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-xl scale-105` 
-                  : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-orange-300 shadow-md'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
+          {categories.map((category) => {
+            const Icon = category.icon;
+            return (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-full font-montserrat font-bold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 ${
+                  selectedCategory === category.id 
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-xl scale-105` 
+                    : 'bg-white text-gray-600 border-2 border-gray-200 hover:border-orange-300 shadow-md'
+                }`}
+              >
+                <Icon size={18} />
+                {category.name}
+              </button>
+            );
+          })}
         </div>
 
         {/* Attractions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredAttractions.map((attraction) => (
-            <div
-              key={attraction.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-200"
-            >
-              {/* Image */}
-              <div className="h-64 overflow-hidden relative">
-                <img 
-                  src={attraction.image}
-                  alt={attraction.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                {attraction.waitTime && (
-                  <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg font-montserrat">
-                    ~{attraction.waitTime} min
+          {filteredAttractions.map((attraction) => {
+            const categoryInfo = getCategoryInfo(attraction.category);
+            const CategoryIcon = categoryInfo.icon;
+            
+            return (
+              <div
+                key={attraction.id}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-200"
+              >
+                {/* Image */}
+                <div className="h-64 overflow-hidden relative">
+                  <img 
+                    src={attraction.image}
+                    alt={attraction.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Category Badge */}
+                  <div className={`absolute top-4 left-4 ${categoryInfo.bgColor} text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg font-montserrat flex items-center gap-2`}>
+                    <CategoryIcon size={16} />
+                    {categoryInfo.name}
                   </div>
-                )}
-              </div>
-              
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="font-dinosaur text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">
-                  {attraction.name}
-                </h3>
-                <p className="font-montserrat text-gray-600 leading-relaxed mb-4">
-                  {attraction.description}
-                </p>
+                </div>
                 
-                {/* Info Tags */}
-                {(attraction.capacity || attraction.heightRange || attraction.ageRange) && (
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
-                    {attraction.capacity && (
-                      <div className="flex items-center gap-1 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-montserrat">
-                        <Users size={14} />
-                        <span className="font-semibold">{attraction.capacity}</span>
-                      </div>
-                    )}
-                    {attraction.heightRange && (
-                      <div className="flex items-center gap-1 bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-montserrat">
-                        <Ruler size={14} />
-                        <span className="font-semibold">{attraction.heightRange}</span>
-                      </div>
-                    )}
-                    {attraction.ageRange && (
-                      <div className="flex items-center gap-1 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-montserrat">
-                        <Clock size={14} />
-                        <span className="font-semibold">{attraction.ageRange}</span>
-                      </div>
-                    )}
-                  </div>
-                )}
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="font-dinosaur text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                    {attraction.name}
+                  </h3>
+                  <p className="font-montserrat text-gray-600 leading-relaxed mb-4">
+                    {attraction.description}
+                  </p>
+                  
+                  {/* Info Tags */}
+                  {(attraction.heightRange || attraction.ageRange) && (
+                    <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                      {attraction.heightRange && (
+                        <div className="flex items-center gap-1 bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm font-montserrat">
+                          <Ruler size={14} />
+                          <span className="font-semibold">{attraction.heightRange}</span>
+                        </div>
+                      )}
+                      {attraction.ageRange && (
+                        <div className="flex items-center gap-1 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm font-montserrat">
+                          <Sparkles size={14} />
+                          <span className="font-semibold">{attraction.ageRange}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Statistics */}
@@ -313,7 +315,7 @@ const AttractionsSection = () => {
               <div className="font-montserrat text-orange-100">Attractions</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">3</div>
+              <div className="text-4xl md:text-5xl font-dinosaur mb-2">4</div>
               <div className="font-montserrat text-orange-100">Pass Différents</div>
             </div>
             <div>

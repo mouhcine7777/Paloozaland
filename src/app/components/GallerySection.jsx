@@ -71,6 +71,15 @@ const NosUniversSection = () => {
     }
   ];
 
+  // Helper function to get grid column classes
+  const getGridColClass = (index) => {
+    // Last item spans 2 columns only on larger screens
+    if (index === 6) {
+      return 'col-span-1 md:col-span-2 lg:col-span-2';
+    }
+    return 'col-span-1';
+  };
+
   return (
     <section 
       id="nos-univers"
@@ -103,7 +112,7 @@ const NosUniversSection = () => {
 
       {/* Full Width Universes Grid - No Background Visible */}
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {universes.map((universe, index) => (
             <motion.div
               key={universe.id}
@@ -112,11 +121,7 @@ const NosUniversSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="relative group cursor-pointer overflow-hidden"
-              style={{ 
-                height: index < 4 ? '400px' : '400px',
-                gridColumn: index === 6 ? 'span 2' : 'span 1'
-              }}
+              className={`relative group cursor-pointer overflow-hidden h-[300px] md:h-[400px] ${getGridColClass(index)}`}
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -133,16 +138,16 @@ const NosUniversSection = () => {
               }`}></div>
 
               {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
+              <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
                   animate={hasAnimated ? { y: 0, opacity: 1 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
                 >
-                  <h3 className="font-dinosaur text-4xl md:text-4xl mb-3 drop-shadow-lg">
+                  <h3 className="font-dinosaur text-2xl md:text-4xl mb-2 md:mb-3 drop-shadow-lg">
                     {universe.title}
                   </h3>
-                  <p className="font-montserrat text-base md:text-lg drop-shadow-md opacity-90 max-w-md">
+                  <p className="font-montserrat text-sm md:text-lg drop-shadow-md opacity-90 max-w-md">
                     {universe.description}
                   </p>
 
@@ -151,7 +156,7 @@ const NosUniversSection = () => {
                     initial={{ width: 0 }}
                     animate={hoveredIndex === index ? { width: '120px' } : { width: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="h-1 bg-white mt-4 rounded-full"
+                    className="h-1 bg-white mt-3 md:mt-4 rounded-full"
                   />
                 </motion.div>
               </div>

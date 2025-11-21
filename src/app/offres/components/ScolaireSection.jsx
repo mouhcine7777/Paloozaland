@@ -141,8 +141,8 @@ const SchoolOffersSection = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
                 {poolFeatures.map((f, i) => (
                   <div key={i} className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-4 border border-cyan-200 text-center">
-                    <h4 className="font-bold text-gray-800 mb-1">{f.title}</h4>
-                    <p className="text-xs text-gray-600">{f.desc}</p>
+                    <h4 className="font-montserrat font-bold text-gray-800 mb-1">{f.title}</h4>
+                    <p className="font-montserrat text-xs text-gray-600">{f.desc}</p>
                   </div>
                 ))}
               </div>
@@ -158,8 +158,8 @@ const SchoolOffersSection = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
                 {restaurationFeatures.map((f, i) => (
                   <div key={i} className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-4 border border-orange-200 text-center">
-                    <h4 className="font-bold text-gray-800 mb-1">{f.title}</h4>
-                    <p className="text-xs text-gray-600">{f.desc}</p>
+                    <h4 className="font-montserrat font-bold text-gray-800 mb-1">{f.title}</h4>
+                    <p className="font-montserrat text-xs text-gray-600">{f.desc}</p>
                   </div>
                 ))}
               </div>

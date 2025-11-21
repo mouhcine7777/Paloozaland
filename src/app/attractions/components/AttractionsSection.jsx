@@ -135,7 +135,7 @@ const AttractionsSection = () => {
       name: "Crazy Cannon",
       category: "maneges",
       description: "Préparez-vous pour une aventure décoiffante ! Tourbillons, virages et vitesse dans ce manège au cœur du Far West.",
-      image: "/gallery/crazycanyon.jpg",
+      image: "/gallery/crazycannon.jpg",
       heightRange: "110-130cm"
     },
     {

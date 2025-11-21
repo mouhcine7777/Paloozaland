@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/offres/components/EntrepriseSection.jsx", "src/app/components/GallerySection.jsx", "src/app/components/TicketsSection.jsx", "src/app/attractions/components/AttractionsSection.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/offres/components/EntrepriseSection.jsx", "src/app/components/GallerySection.jsx", "src/app/components/TicketsSection.jsx", "src/app/attractions/components/AttractionsSection.jsx", "src/app/offres/components/ScolaireSection.jsx"],
   "exclude": ["node_modules"]
 }

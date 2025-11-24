@@ -24,23 +24,23 @@ const SchoolOffersSection = () => {
   };
 
   const attractionFeatures = [
-    { title: 'Accès aux attractions', desc: 'Manèges adaptés à tous les âges' },
-    { title: 'Monster Tower', desc: 'Parcours aventure sensationnel' },
-    { title: 'Accrobranche', desc: 'Parcours dans les arbres' },
-    { title: 'Formules combinées', desc: 'Attractions + aventures' }
+    { title: 'PASS ALL INCLUSIVE', desc: 'Expérience Complète' },
+    { title: 'PASS MANÈGES', desc: '16 attractions' },
+    { title: 'PASS AVENTURES', desc: '4 aventures' },
+    { title: 'PASS VR CLUB', desc: '3 expériences VR' }
   ];
 
   const poolFeatures = [
     { title: 'Pass Piscine Enfant', desc: 'Pour les moins de 1m20' },
     { title: 'Pass Piscine Adulte', desc: 'Pour les plus de 1m20' },
-    { title: 'Surveillance', desc: 'Maîtres-nageurs présents' },
+    { title: 'Surveillance', desc: 'Présence de maîtres-nageurs' },
     { title: 'Vestiaires', desc: 'Espaces dédiés aux groupes' }
   ];
 
   const restaurationFeatures = [
-    { title: 'Menu Sandwich', desc: 'Sandwich/Panini + frites + soda' },
-    { title: 'Menu Burger', desc: 'Burger/Tacos + frites + soda + glace' },
-    { title: 'Menu Complet', desc: 'Salade + plat + frites + eau + glace' },
+    { title: 'Menu Sandwich', desc: 'Sandwich/Panini + frites + boisson' },
+    { title: 'Menu Burger', desc: 'Burger/Tacos + frites + boisson + glace' },
+    { title: 'Menu Complet', desc: 'Salade + plat + frites + boisson + glace' },
     { title: 'Menu Goûter', desc: 'Viennoiseries ou crêpes + boisson' }
   ];
 
@@ -67,7 +67,7 @@ const SchoolOffersSection = () => {
                 <div className="text-left">
                   <h3 className="font-montserrat text-2xl font-bold text-gray-800 mb-3">VISITES SCOLAIRES</h3>
                   <p className="font-montserrat text-gray-700 leading-relaxed">
-                    Palooza Park propose des jeux uniques avec des espaces ludiques pour découvrir le monde des dinosaures. À la carte ou via nos différentes formules, nous vous proposons des solutions adaptées à vos besoins et à vos budgets.
+                  Au Palooza Park, les enfants  explorent le monde des dinosaures à travers des jeux et des espaces ludiques. Choisissez nos formules ou créez  votre visite sur mesure.
                   </p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const SchoolOffersSection = () => {
             <h3 className="font-dinosaur text-4xl text-center mb-8 text-gray-800">NOS AVANTAGES</h3>
             <div className="grid md:grid-cols-4 gap-4">
               {[
-                { icon: Users, title: 'Tarifs Groupe', desc: 'Prix adaptés aux écoles', color: 'from-orange-400 to-amber-500' },
+                { icon: Users, title: 'Tarifs Groupes', desc: 'Offres spéciales pour les écoles', color: 'from-orange-400 to-amber-500' },
                 { icon: Shield, title: 'Sécurité', desc: 'Encadrement professionnel', color: 'from-cyan-500 to-blue-500' },
                 { icon: BookOpen, title: 'Éducatif', desc: 'Découverte ludique', color: 'from-green-500 to-emerald-500' },
                 { icon: Mail, title: 'Support Dédié', desc: 'Accompagnement personnalisé', color: 'from-purple-500 to-pink-500' }
@@ -167,7 +167,7 @@ const SchoolOffersSection = () => {
           )}
 
           <div className="mt-10 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 rounded-3xl p-6 md:p-10 text-white text-center shadow-2xl">
-            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">TÉLÉCHARGEZ NOTRE BROCHURE SCOLAIRE</h3>
+            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">Téléchargez notre brochure<br></br>Offres Scolaires</h3>
             <p className="font-montserrat text-lg mb-8 text-orange-50 max-w-2xl mx-auto">
               Découvrez tous nos forfaits scolaires, tarifs détaillés et services dans notre brochure complète.
             </p>

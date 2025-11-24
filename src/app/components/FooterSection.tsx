@@ -80,7 +80,7 @@ const FooterSection = () => {
             </div>
             <p className="text-gray-300 font-montserrat text-sm leading-relaxed max-w-sm">
               Découvrez un monde préhistorique extraordinaire où l'aventure et l'éducation se rencontrent. 
-              Une expérience inoubliable pour toute la famille.
+              <br></br>Une expérience inoubliable pour toute la famille.
             </p>
           </motion.div>
 

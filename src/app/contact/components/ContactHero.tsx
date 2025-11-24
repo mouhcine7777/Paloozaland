@@ -36,8 +36,8 @@ const ContactHeroSection = () => {
           <motion.h1 
             className="mb-4 sm:mb-6 font-dinosaur text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight drop-shadow-lg bg-gradient-to-r from-yellow-400 via-orange-500 to-teal-600 bg-clip-text text-transparent leading-tight"
           >
-            CONTACTEZ
-            <span className="bg-gradient-to-r from-amber-300 to-yellow-500 bg-clip-text text-transparent"> NOUS</span>
+            CONTACTEZ-
+            <span className="bg-gradient-to-r from-amber-300 to-yellow-500 bg-clip-text text-transparent">NOUS</span>
           </motion.h1>
 
           <motion.div
@@ -60,7 +60,7 @@ const ContactHeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="mb-6 sm:mb-8 font-montserrat text-sm sm:text-base md:text-lg text-white/90 drop-shadow-md max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed"
+            className="mb-6 sm:mb-8 font-montserrat text-sm sm:text-base md:text-lg text-white/90 drop-shadow-md max-w-xs sm:max-w-2xl md:max-w-4xl mx-auto leading-relaxed"
           >
             Des questions sur votre visite ? Besoin d'informations pour organiser un événement ?
             Notre équipe est là pour vous accompagner dans votre aventure préhistorique.

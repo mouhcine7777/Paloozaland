@@ -62,9 +62,7 @@ const OffresHeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="mb-6 sm:mb-8 font-montserrat text-sm sm:text-base md:text-lg text-white/90 drop-shadow-md max-w-xs sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed"
           >
-            Découvrez nos offres spéciales conçues pour les écoles et les entreprises. 
-            Visites pédagogiques, ateliers interactifs et formules team-building 
-            pour une immersion totale dans le monde fascinant des dinosaures.
+            Plongez dans nos offres exclusives pour les écoles et les entreprises ; visites pédagogiques, ateliers interactifs et activités  de team-building pour une immersion complète dans l'univers captivant des dinosaures.
           </motion.p>
         </motion.div>
       </div>

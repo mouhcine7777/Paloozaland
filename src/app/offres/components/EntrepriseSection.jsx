@@ -56,7 +56,7 @@ const BusinessOffersSection = () => {
             </h2>
             <div className="h-1 w-32 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
             <p className="font-montserrat text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Offrez à vos collaborateurs une expérience inoubliable au Palooza Park. Découvrez nos formules sur mesure pour vos événements d'entreprise, team building et séminaires.
+              Offrez à vos collaborateurs une expérience inoubliable au Palooza Park. Découvrez nos formules sur mesure pour vos événements d'entreprise, team-building et séminaires.
             </p>
           </div>
 

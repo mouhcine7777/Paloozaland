@@ -11,8 +11,8 @@ export default function Home() {
     <main>
       <StickyNavbar />
       <OffresHero />
-      <EntrepriseSection />
       <ScolaireSection />
+      <EntrepriseSection />
       <FooterSection />
     </main>
   );

@@ -169,7 +169,7 @@ const SchoolOffersSection = () => {
           <div className="mt-10 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 rounded-3xl p-6 md:p-10 text-white text-center shadow-2xl">
             <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">Téléchargez notre brochure<br></br>Offres Scolaires</h3>
             <p className="font-montserrat text-lg mb-8 text-orange-50 max-w-2xl mx-auto">
-              Découvrez tous nos forfaits scolaires, tarifs détaillés et services dans notre brochure complète.
+            Consultez notre brochure complète pour découvrir nos forfaits scolaires, tarifs et services.
             </p>
             <button
               onClick={() => setShowForm(true)}

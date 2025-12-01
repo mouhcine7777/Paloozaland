@@ -375,7 +375,7 @@ const ForfeitsSection = () => {
                 
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-4 border-2 border-amber-300 hover:border-amber-400 hover:shadow-md transition-all text-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-600 text-white mx-auto mb-3">
-                    <span className="text-lg font-bold">2</span>
+                    <span classNam  e="text-lg font-bold">2</span>
                   </div>
                   <div className="font-montserrat text-base font-bold text-amber-900 mb-1">PASS AVENTURES</div>
                   <div className="font-montserrat text-xs text-amber-700 mb-2">4 aventures</div>

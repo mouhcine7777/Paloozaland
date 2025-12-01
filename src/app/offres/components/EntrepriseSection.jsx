@@ -52,7 +52,7 @@ const BusinessOffersSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="font-dinosaur text-5xl md:text-6xl mb-6 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 bg-clip-text text-transparent">
-              OFFRES ENTREPRISES
+              OFFRE ENTREPRISE
             </h2>
             <div className="h-1 w-32 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
             <p className="font-montserrat text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -97,7 +97,7 @@ const BusinessOffersSection = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl">
-            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">TÉLÉCHARGEZ NOTRE BROCHURE</h3>
+            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">TÉLÉCHARGEZ NOTRE BROCHURE <br></br>OFFRE ENTREPRISE</h3>
             <p className="font-montserrat text-lg mb-8 text-orange-50 max-w-2xl mx-auto">
               Découvrez tous nos forfaits entreprises, tarifs et services dans notre brochure complète. Remplissez le formulaire pour recevoir votre brochure immédiatement.
             </p>
@@ -141,7 +141,7 @@ const BusinessOffersSection = () => {
                     value={formData.companyName}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
                     placeholder="Votre entreprise"
                   />
                 </div>
@@ -156,7 +156,7 @@ const BusinessOffersSection = () => {
                     value={formData.contactName}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
                     placeholder="Votre nom complet"
                   />
                 </div>
@@ -171,7 +171,7 @@ const BusinessOffersSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
                     placeholder="email@entreprise.com"
                   />
                 </div>
@@ -186,22 +186,8 @@ const BusinessOffersSection = () => {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
                     placeholder="+212 6XX XXX XXX"
-                  />
-                </div>
-
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">
-                    Message (optionnel)
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="4"
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat resize-none"
-                    placeholder="Parlez-nous de votre projet..."
                   />
                 </div>
               </div>

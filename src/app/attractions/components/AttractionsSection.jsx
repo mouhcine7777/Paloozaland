@@ -27,7 +27,7 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Installez-vous confortablement et laissez Apollo vous emmener dans une expérience vertigineuse!",
       image: "/gallery/apollo.jpg",
-      heightRange: "100-140cm"
+      heightRange: "100-140cm+"
     },
     {
       id: 4,
@@ -120,7 +120,7 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Remontez le temps ! Explorez une vallée préhistorique peuplée de dinosaures géants et partez à l'aventure au cœur de la jungle.",
       image: "/gallery/dinovalley.jpg",
-      heightRange: "100-130cm"
+      heightRange: "100-130cm+"
     },
     {
       id: 16,
@@ -128,7 +128,7 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Accrochez-vous ! Le légendaire bateau Kontiki vous embarque pour une traversée pleine de rebondissements et de fous rires.",
       image: "/gallery/kontiki.jpg",
-      heightRange: "100-140cm"
+      heightRange: "100-140cm+"
     },
     {
       id: 17,
@@ -136,7 +136,7 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Préparez-vous pour une aventure décoiffante ! Tourbillons, virages et vitesse dans ce manège au cœur du Far West.",
       image: "/gallery/crazycannon.jpg",
-      heightRange: "110-130cm"
+      heightRange: "110-130cm+"
     },
     {
       id: 18,
@@ -144,7 +144,7 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Préparez-vous au tournis ! Montez à bord et laissez-vous emporter par cette attraction tournante pleine de rires et de sensations. Un tour dynamique et amusant pour toute la famille !",
       image: "/gallery/locoloco.jpg",
-      heightRange: "100-120cm"
+      heightRange: "100-120cm+"
     },
     {
       id: 19,
@@ -152,7 +152,7 @@ const AttractionsSection = () => {
       category: "maneges",
       description: "Un tour complètement fou ! Tournez, penchez, riez… cette attraction promet un maximum de fun et de sensations!",
       image: "/gallery/cocopiloto.jpg",
-      heightRange: "110-130cm"
+      heightRange: "110-130cm+"
     },
     {
       id: 20,

@@ -103,8 +103,8 @@ const NosUniversSection = () => {
               NOS UNIVERS
             </motion.h2>
             <div className="mx-auto h-1 w-48 bg-gradient-to-r from-orange-600 to-yellow-400 mb-6"></div>
-            <p className="font-montserrat text-amber-900 text-lg mx-auto max-w-3xl">
-              Sept mondes extraordinaires vous attendent pour une aventure préhistorique complète
+            <p className="font-montserrat text-amber-900 text-lg mx-auto max-w-4xl">
+              Sept mondes extraordinaires vous attendent pour une aventure préhistorique complète.
             </p>
           </motion.div>
         </div>

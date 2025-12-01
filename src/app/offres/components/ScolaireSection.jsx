@@ -167,7 +167,7 @@ const SchoolOffersSection = () => {
           )}
 
           <div className="mt-10 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 rounded-3xl p-6 md:p-10 text-white text-center shadow-2xl">
-            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">Téléchargez notre brochure<br></br>Offres Scolaires</h3>
+            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">Téléchargez notre brochure<br></br>Offre Scolaire</h3>
             <p className="font-montserrat text-lg mb-8 text-orange-50 max-w-2xl mx-auto">
             Consultez notre brochure complète pour découvrir nos forfaits scolaires, tarifs et services.
             </p>
@@ -198,32 +198,22 @@ const SchoolOffersSection = () => {
                 <div>
                   <label className="font-montserrat font-semibold text-gray-700 block mb-2">Nom de l'établissement *</label>
                   <input type="text" name="schoolName" value={formData.schoolName} onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="Votre école" />
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="Votre école" />
                 </div>
                 <div>
                   <label className="font-montserrat font-semibold text-gray-700 block mb-2">Nom et prénom *</label>
                   <input type="text" name="contactName" value={formData.contactName} onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="Votre nom complet" />
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="Votre nom complet" />
                 </div>
                 <div>
                   <label className="font-montserrat font-semibold text-gray-700 block mb-2">Email *</label>
                   <input type="email" name="email" value={formData.email} onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="email@ecole.ma" />
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="email@ecole.ma" />
                 </div>
                 <div>
                   <label className="font-montserrat font-semibold text-gray-700 block mb-2">Téléphone *</label>
                   <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="+212 6XX XXX XXX" />
-                </div>
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">Nombre d'élèves estimé</label>
-                  <input type="number" name="studentCount" value={formData.studentCount} onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="Ex: 50" />
-                </div>
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">Message (optionnel)</label>
-                  <textarea name="message" value={formData.message} onChange={handleInputChange} rows="4"
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat resize-none" placeholder="Parlez-nous de votre projet..." />
+                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" placeholder="+212 6XX XXX XXX" />
                 </div>
               </div>
 

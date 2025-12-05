@@ -71,7 +71,7 @@ const NoelPopup = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="fixed left-1/2 top-1/2 z-50 w-[90%] max-w-2xl -translate-x-1/2 -translate-y-1/2"
+            className="fixed left-1/2 top-1/2 z-50 w-[90%] max-w-xl -translate-x-1/2 -translate-y-1/2"
           >
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-950 via-black to-red-950 shadow-2xl">
               {/* Sparkle decorations */}
@@ -92,7 +92,7 @@ const NoelPopup = () => {
               </button>
 
               {/* Image */}
-              <div className="relative h-64 sm:h-80 w-full">
+              <div className="relative h-48 sm:h-56 md:h-72 w-full">
                 <img
                   src="/noelpopup.jpg"
                   alt="Événement de Noël"
@@ -103,31 +103,41 @@ const NoelPopup = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 sm:p-8 text-center">
+              <div className="p-4 sm:p-6 md:p-8 text-center">
                 <motion.h2
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="mb-3 font-dinosaur text-4xl sm:text-5xl md:text-4xl"
-                  style={{
-                    background: 'linear-gradient(to right, #dc2626, #ef4444, #fecaca)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}
+                  className="mb-3 font-dinosaur text-2xl sm:text-3xl md:text-4xl text-white drop-shadow-lg whitespace-nowrap"
                 >
-                  Noël Magique à Palooza Park
+                  Noël au Palooza Park
                 </motion.h2>
+
+                <motion.h3
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.25 }}
+                  className="mb-3 font-montserrat text-lg sm:text-xl font-bold text-red-400"
+                >
+                  Les Merveilles Jurassiques débarquent au Palooza Park ! 
+                </motion.h3>
 
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="mb-6 font-montserrat text-gray-200 text-sm sm:text-base leading-relaxed"
+                  className="mb-4 font-montserrat text-gray-300 text-sm sm:text-base"
                 >
-                  Du 6 décembre au 18 janvier, Palooza Park s'illumine pour les fêtes !<br />
-                  Rencontrez le Père Noël, émerveillez-vous devant les dinosaures décorés, 
-                  et profitez d'animations féériques pour toute la famille.
+                  Profitez d'animations de Noël, dinosaures lumineux et offres spéciales pour une expérience magique en famille
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.35 }}
+                  className="mb-6 font-montserrat text-white text-base sm:text-lg font-semibold"
+                >
+                  06 Décembre – 18 Janvier
                 </motion.p>
 
                 <motion.button
@@ -139,7 +149,7 @@ const NoelPopup = () => {
                   onClick={handleNavigate}
                   className="rounded-full bg-gradient-to-r from-red-600 to-red-500 px-8 py-3 font-montserrat font-bold text-white shadow-lg hover:shadow-red-500/50 transition-shadow"
                 >
-                  DÉCOUVRIR LA MAGIE DE NOËL
+                  Découvrir nos offres
                 </motion.button>
               </div>
             </div>

@@ -12,8 +12,10 @@ import OffersSection from "./components/OffersSection";
 export default function Home() {
   return (
     <main>
+      <HalloweenPopup />
       <StickyNavbar />
       <HeroSection />
+      <OffersSection />
       <TicketsSection />
       <GallerySection />
       <TimingSection />

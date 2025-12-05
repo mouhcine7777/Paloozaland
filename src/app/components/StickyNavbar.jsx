@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,6 +7,7 @@ import Link from 'next/link';
 const StickyNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +25,20 @@ const StickyNavbar = () => {
     };
   }, []);
 
+  // Fermer le menu mobile quand on clique à l'extérieur
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   const navItems = [
     { name: "Accueil", href: "/" },
     { name: "Attractions", href: "/attractions" },
@@ -31,6 +46,11 @@ const StickyNavbar = () => {
     { name: "Nos Offres", href: "/offres" },
     { name: "Contact", href: "/contact" }
   ];
+
+  // Fonction pour fermer le menu mobile
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -92,7 +112,9 @@ const StickyNavbar = () => {
             <div className="md:hidden">
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="flex items-center px-3 py-2 rounded text-white"
+                className="flex items-center px-3 py-2 rounded text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
+                aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                aria-expanded={mobileMenuOpen}
               >
                 <div className="relative w-6 h-5">
                   <motion.span
@@ -121,6 +143,7 @@ const StickyNavbar = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
+            ref={mobileMenuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -138,8 +161,8 @@ const StickyNavbar = () => {
                 >
                   <Link 
                     href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block px-4 py-2 text-gray-800 font-montserrat font-medium text-lg border-l-4 border-transparent hover:border-orange-500 hover:bg-orange-50"
+                    onClick={closeMobileMenu}
+                    className="block px-4 py-2 text-gray-800 font-montserrat font-medium text-lg border-l-4 border-transparent hover:border-orange-500 hover:bg-orange-50 transition-all duration-200"
                   >
                     {item.name}
                   </Link>
@@ -151,19 +174,23 @@ const StickyNavbar = () => {
                 transition={{ delay: navItems.length * 0.1 }}
                 className="mt-4 mx-4"
               >
-                <Link 
-                  href="#tickets"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block w-full py-3 text-center bg-gradient-to-r from-orange-600 to-amber-500 text-white rounded-lg font-montserrat font-bold shadow-md"
+                {/* Changer pour un élément <a> au lieu de <Link> pour les numéros de téléphone */}
+                <a 
+                  href="tel:+212661635095"
+                  onClick={(e) => {
+                    // Laisser le navigateur gérer l'appel téléphonique
+                    closeMobileMenu();
+                  }}
+                  className="block w-full py-3 text-center bg-gradient-to-r from-orange-600 to-amber-500 text-white rounded-lg font-montserrat font-bold shadow-md hover:from-orange-700 hover:to-amber-600 transition-all duration-200 active:scale-95"
                 >
-                  RÉSERVER MAINTENANT
-                </Link>
+                  Appelez-nous 
+                </a>
               </motion.div>
             </div>
             
             {/* Decorative elements */}
             <svg 
-              className="absolute bottom-0 left-0 right-0 text-orange-500 opacity-10"
+              className="absolute bottom-0 left-0 right-0 text-orange-500 opacity-10 pointer-events-none"
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 1440 320"
             >

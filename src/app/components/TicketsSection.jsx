@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const ForfeitsSection = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -177,20 +177,28 @@ const ForfeitsSection = () => {
                 key={index}
                 variants={itemVariants}
                 className="relative h-[500px] md:h-[520px]"
-                style={{ perspective: '1000px' }}
               >
-                <motion.div
-                  className="relative w-full h-full"
-                  style={{ transformStyle: 'preserve-3d' }}
-                  animate={{ rotateY: flippedCard === index ? 180 : 0 }}
-                  transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
+                <div 
+                  className="relative w-full h-full transition-transform duration-700"
+                  style={{
+                    transformStyle: 'preserve-3d',
+                    WebkitTransformStyle: 'preserve-3d',
+                    transform: flippedCard === index 
+                      ? 'translate3d(0,0,0) rotateY(180deg)' 
+                      : 'translate3d(0,0,0) rotateY(0deg)',
+                    WebkitTransform: flippedCard === index 
+                      ? 'translate3d(0,0,0) rotateY(180deg)' 
+                      : 'translate3d(0,0,0) rotateY(0deg)'
+                  }}
                 >
                   {/* Front of Card */}
                   <div 
                     className="absolute w-full h-full rounded-3xl overflow-hidden bg-white shadow-xl"
                     style={{ 
                       backfaceVisibility: 'hidden',
-                      WebkitBackfaceVisibility: 'hidden'
+                      WebkitBackfaceVisibility: 'hidden',
+                      WebkitTransform: 'translate3d(0,0,1px)',
+                      transform: 'translate3d(0,0,1px)'
                     }}
                   >
                     <div className={`h-2 w-full bg-gradient-to-r ${pass.color}`}></div>
@@ -269,7 +277,8 @@ const ForfeitsSection = () => {
                     style={{ 
                       backfaceVisibility: 'hidden',
                       WebkitBackfaceVisibility: 'hidden',
-                      transform: 'rotateY(180deg)'
+                      transform: 'rotateY(180deg) translate3d(0,0,1px)',
+                      WebkitTransform: 'rotateY(180deg) translate3d(0,0,1px)'
                     }}
                   >
                     <div className={`h-2 w-full bg-gradient-to-r ${pass.color}`}></div>
@@ -286,7 +295,7 @@ const ForfeitsSection = () => {
                       </div>
                       
                       {/* Features Grid */}
-                      <div className="flex-1 mb-4 overflow-visible">
+                      <div className="flex-1 mb-4 overflow-y-auto">
                         <div className={`grid gap-1.5 ${
                           index === 0 
                             ? 'grid-cols-2 auto-rows-min' 
@@ -301,7 +310,7 @@ const ForfeitsSection = () => {
                                 <div className={`w-3 h-3 rounded-full flex items-center justify-center bg-gradient-to-r ${pass.color} text-white flex-shrink-0`}>
                                   <span className="text-[8px] font-bold">✓</span>
                                 </div>
-                                <span className={`font-montserrat text-[13px] font-medium text-amber-900 leading-tight`}>{feature}</span>
+                                <span className="font-montserrat text-[13px] font-medium text-amber-900 leading-tight">{feature}</span>
                               </div>
                             </div>
                           ))}
@@ -320,12 +329,12 @@ const ForfeitsSection = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>
 
-          {/* All Inclusive Card - Optimized Layout */}
+          {/* All Inclusive Card */}
           <motion.div
             variants={itemVariants}
             whileHover={{ scale: 1.01, transition: { duration: 0.3 } }}
@@ -333,7 +342,6 @@ const ForfeitsSection = () => {
           >
             <div className="h-2 w-full bg-gradient-to-r from-yellow-500 to-orange-600"></div>
             
-            {/* Improved balanced layout */}
             <div className="p-6 lg:p-8">
               {/* Header with Price */}
               <div className="flex flex-col lg:flex-row items-center justify-between gap-6 mb-6">
@@ -362,7 +370,7 @@ const ForfeitsSection = () => {
                 </div>
               </div>
 
-              {/* Included Passes - Horizontal Layout */}
+              {/* Included Passes */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-4 border-2 border-yellow-300 hover:border-yellow-400 hover:shadow-md transition-all text-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-400 to-amber-500 text-white mx-auto mb-3">
@@ -375,7 +383,7 @@ const ForfeitsSection = () => {
                 
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-4 border-2 border-amber-300 hover:border-amber-400 hover:shadow-md transition-all text-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-600 text-white mx-auto mb-3">
-                    <span classNam  e="text-lg font-bold">2</span>
+                    <span className="text-lg font-bold">2</span>
                   </div>
                   <div className="font-montserrat text-base font-bold text-amber-900 mb-1">PASS AVENTURES</div>
                   <div className="font-montserrat text-xs text-amber-700 mb-2">4 aventures</div>

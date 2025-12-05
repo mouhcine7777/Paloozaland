@@ -18,9 +18,45 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
+// ⭐ FULL SEO OPTIMIZED METADATA
 export const metadata: Metadata = {
-  title: "palooza Park",
-  description: "Palooza ",
+  title: {
+    default: "Palooza Park – Parc d’Attractions à Marrakech",
+    template: "%s | Palooza Park Marrakech",
+  },
+  description:
+    "Palooza Park Marrakech – Parc d’attractions thématique avec dinosaures, manèges, espace enfants, restaurants et activités familiales. Découvrez nos attractions, horaires, tarifs et événements.",
+  keywords: [
+    "Palooza Park",
+    "Palooza Park Marrakech",
+    "parc d'attraction Marrakech",
+    "parc dinosaure Marrakech",
+    "dinosaur park Morocco",
+    "family park Marrakech",
+    "sorties Marrakech",
+    "activités enfants Marrakech",
+  ],
+  openGraph: {
+    title: "Palooza Park – Parc d’Attractions à Marrakech",
+    description:
+      "Découvrez Palooza Park Marrakech : dinosaures, manèges, attractions, espace famille, restaurants et expériences immersives.",
+    url: "https://paloozaland.com",
+    siteName: "Palooza Park Marrakech",
+    locale: "fr_FR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  metadataBase: new URL("https://paloozaland.com"),
 };
 
 export default function RootLayout({
@@ -29,8 +65,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}>
+    <html lang="fr">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

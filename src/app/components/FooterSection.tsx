@@ -135,7 +135,7 @@ const FooterSection = () => {
             <div className="text-gray-300 font-montserrat text-sm space-y-1">
               <p>📍  Bd Allal Al Fassi, Marrakech, Maroc</p>
               <p>📞 +212 661-635095</p>
-              <p>✉️ contact@paloozapland.com</p>
+              <p>✉️ contact@paloozaland.com</p>
             </div>
           </motion.div>
         </div>

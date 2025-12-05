@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Background Image with Black Shadow Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bg2.jpg"
+          src="/bg3.jpg"
           alt="Palooza Park Background"
           fill
           priority
@@ -25,7 +25,6 @@ const HeroSection = () => {
         {/* Black shadow overlay */}
         <div className="absolute inset-0 bg-black/50" />
         {/* Orange gradient overlay on top of black shadow */}
-
       </div>
 
       {/* Hero Content */}
@@ -37,7 +36,7 @@ const HeroSection = () => {
           className="text-center px-4 md:px-8 max-w-4xl"
         >
           <motion.h1 
-            className="mb-4 font-dinosaur text-7xl md:text-8xl tracking-tight drop-shadow-lg bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent"
+            className="mb-1 font-dinosaur text-7xl md:text-8xl tracking-tight drop-shadow-lg bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent"
           >
             PALOOZA
             <span className="bg-gradient-to-r from-amber-300 to-yellow-500 bg-clip-text text-transparent"> PARK</span>
@@ -74,12 +73,12 @@ Vivez une aventure préhistorique inoubliable au cœur de Marrakech, entre attra
             </Link>
           </motion.div>
 
-          {/* Simple Scroll Indicator */}
+          {/* Simple Scroll Indicator - Hidden on mobile, visible on md and up */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isLoaded ? { opacity: 0.9 } : {}}
             transition={{ delay: 0.8 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white"
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center text-white hidden md:block"
           >
             <motion.div
               animate={{ y: [0, -8, 0] }}

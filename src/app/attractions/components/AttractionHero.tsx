@@ -65,27 +65,6 @@ const AttractionsHeroSection = () => {
 Revivez la préhistoire : sensations, explorations et découvertes au cœur d’un monde disparu depuis 65 millions d’années.
           </motion.p>
 
-          {/* Feature highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm md:text-base"
-          >
-            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">+22 Attractions</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Expériences 6D</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
-              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-red-400 rounded-full flex-shrink-0"></div>
-              <span className="text-white font-montserrat whitespace-nowrap">Sensations Fortes</span>
-            </div>
-          </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}

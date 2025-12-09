@@ -137,7 +137,7 @@ const NoelPopup = () => {
                   transition={{ delay: 0.35 }}
                   className="mb-6 font-montserrat text-white text-base sm:text-lg font-semibold"
                 >
-                  06 Décembre – 18 Janvier
+                  06 décembre 2025 au 18 janvier 2026
                 </motion.p>
 
                 <motion.button

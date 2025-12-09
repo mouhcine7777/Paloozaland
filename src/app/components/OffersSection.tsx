@@ -5,29 +5,34 @@ import { motion } from 'framer-motion';
 const NoelSection = () => {
   const offers = [
     {
-      title: "Une formule gourmande et amusante pour les familles !",
+      title: "Fun & Food – Spécial Fin d'Année",
       price: "109 DH",
-      description: "Accès aux attractions + Menu enfant ou goûter."
+      description: "Une formule gourmande et amusante pour les familles !",
+      subdescription: "Accès aux attractions + Menu enfant ou goûter"
     },
     {
-      title: "L’expérience Palooza complète !",
+      title: "All Inclusive Gourmand",
       price: "209 DH",
-      description: "Attractions + Aventures + VR + 1 crêpe ou gaufre offerte."
+      description: "L'expérience Palooza complète !",
+      subdescription: "Attractions + Aventures + VR + 1 crêpe ou gaufre offerte"
     },
     {
-      title: "Le pack idéal pour les sorties en famille !",
+      title: "Winter Family Pack",
       price: "320 DH",
-      description: "4 accès attractions + Photo souvenir digitale offerte."
+      description: "Le pack idéal pour les sorties en famille !",
+      subdescription: "4 accès attractions + Photo souvenir digitale offerte"
     },
     {
-      title: "Un moment à partager à deux !",
+      title: "Duo Magic Pass",
       price: "179 DH",
-      description: "2 accès attractions + Goûter à partager."
+      description: "Un moment à partager à deux !",
+      subdescription: "2 accès attractions + Goûter à partager"
     },
     {
-      title: "Un week-end rempli d’aventure !",
+      title: "Magic Weekend Pass",
       price: "159 DH",
-      description: "Accès illimité aux attractions sur 2 jours consécutifs + Photo souvenir digitale offerte."
+      description: "Un week-end rempli d'aventure !",
+      subdescription: "Accès illimité aux attractions sur 2 jours consécutifs + Photo souvenir digitale offerte"
     }
   ];
 
@@ -102,8 +107,11 @@ const NoelSection = () => {
                         {offer.price}
                       </span>
                     </div>
-                    <p className="font-montserrat font-medium text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    <p className="font-montserrat text-xs sm:text-sm text-gray-300 leading-relaxed">
                       {offer.description}
+                    </p>
+                    <p className="font-montserrat font-bold text-xs sm:text-sm text-gray-200 leading-relaxed mt-1">
+                      {offer.subdescription}
                     </p>
                   </motion.div>
                 ))}

@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -18,30 +13,28 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
 });
 
-// ⭐ FULL SEO OPTIMIZED METADATA
+// ⭐ SEO METADATA - PAGE ACCUEIL
 export const metadata: Metadata = {
-  title: {
-    default: "Palooza Park – Parc d’Attractions à Marrakech",
-    template: "%s | Palooza Park Marrakech",
-  },
+  title: "Parc d'attraction Marrakech – Parc de jeux & aqua park Maroc",
   description:
-    "Palooza Park Marrakech – Parc d’attractions thématique avec dinosaures, manèges, espace enfants, restaurants et activités familiales. Découvrez nos attractions, horaires, tarifs et événements.",
+    "Découvrez Palooza Land, le parc d'attractions incontournable à Marrakech : manèges, expériences VR, piscine, aqua park, accrobranche et spectacles pour toute la famille. Vivez une journée de fun inoubliable !",
   keywords: [
-    "Palooza Park",
+    "Palooza Land",
     "Palooza Park Marrakech",
     "parc d'attraction Marrakech",
-    "parc dinosaure Marrakech",
-    "dinosaur park Morocco",
-    "family park Marrakech",
-    "sorties Marrakech",
-    "activités enfants Marrakech",
+    "aqua park Marrakech",
+    "parc de jeux Maroc",
+    "manèges Marrakech",
+    "VR Marrakech",
+    "accrobranche Marrakech",
+    "sorties famille Marrakech",
   ],
   openGraph: {
-    title: "Palooza Park – Parc d’Attractions à Marrakech",
+    title: "Parc d'attraction Marrakech – Parc de jeux & aqua park Maroc",
     description:
-      "Découvrez Palooza Park Marrakech : dinosaures, manèges, attractions, espace famille, restaurants et expériences immersives.",
+      "Découvrez Palooza Land, le parc d'attractions incontournable à Marrakech : manèges, expériences VR, piscine, aqua park, accrobranche et spectacles pour toute la famille.",
     url: "https://paloozaland.com",
-    siteName: "Palooza Park Marrakech",
+    siteName: "Palooza Land Marrakech",
     locale: "fr_FR",
     type: "website",
   },
@@ -67,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${inter.variable} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>

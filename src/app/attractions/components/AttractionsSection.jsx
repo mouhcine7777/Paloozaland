@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { Ruler, Sparkles, Mountain, Gamepad2 } from 'lucide-react';
 
@@ -108,13 +110,6 @@ const AttractionsSection = () => {
       image: "/gallery/spinBumper.jpg"
     },
     {
-      id: 14,
-      name: "Cinema 6D",
-      category: "maneges",
-      description: "Vivez le cinéma comme jamais ! Des effets spéciaux, des vibrations et des sensations immersives dans une expérience 6D à couper le souffle!",
-      image: "/gallery/cinema4D.jpg"
-    },
-    {
       id: 15,
       name: "Dino Valley",
       category: "maneges",
@@ -174,12 +169,19 @@ const AttractionsSection = () => {
       category: "vr",
       description: "Enfilez vos casques et embarquez pour une aventure immersive avec VR Team!",
       image: "/gallery/vrteam.jpg"
+    },
+    {
+      id: 23,
+      name: "Space Loop",
+      category: "maneges",
+      description: "Défiez la gravité Le Space Loop vous embarque dans un tourbillon de sensations fortes",
+      image: "/gallery/spaceloop.jpg"
     }
   ];
 
   const categories = [
     { id: 'toutes', name: 'Pass All Inclusive', color: 'from-orange-500 to-amber-500', icon: Sparkles },
-    { id: 'maneges', name: 'Pass Manèges', color: 'from-blue-500 to-cyan-500', icon: Sparkles },
+    { id: 'maxi fun', name: 'Pass Maxi Fun', color: 'from-blue-500 to-cyan-500', icon: Sparkles },
     { id: 'aventures', name: 'Pass Aventures', color: 'from-green-500 to-emerald-500', icon: Mountain },
     { id: 'vr', name: 'Pass VR', color: 'from-purple-500 to-pink-500', icon: Gamepad2 }
   ];
@@ -187,7 +189,7 @@ const AttractionsSection = () => {
   const getCategoryInfo = (category) => {
     const categoryMap = {
       'maneges': { 
-        name: 'Pass Manèges', 
+        name: 'Pass Maxi Fun', 
         color: 'from-blue-500 to-cyan-500',
         bgColor: 'bg-gradient-to-r from-blue-500 to-cyan-500',
         textColor: 'text-blue-600',
@@ -225,7 +227,7 @@ const AttractionsSection = () => {
           </h2>
           <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-6" />
           <p className="font-montserrat text-xl text-gray-600 max-w-7xl mx-auto leading-relaxed">
-            22 attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park
+            Des attractions exceptionnelles vous attendent dans l'univers préhistorique de Palooza Park !
           </p>
         </div>
 
@@ -311,7 +313,7 @@ const AttractionsSection = () => {
         <div className="mt-20 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 md:p-12 text-white">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-dinosaur mb-2">22</div>
+              <div className="text-4xl md:text-5xl font-dinosaur mb-2">23</div>
               <div className="font-montserrat text-orange-100">Attractions</div>
             </div>
             <div>

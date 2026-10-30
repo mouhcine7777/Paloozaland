@@ -32,13 +32,12 @@ const ForfeitsSection = () => {
 
   const passes = [
     {
-      title: "PASS MANÈGES",
+      title: "PASS MAXI FUN",
       weekdayPrice: "69 DH",
       weekendPrice: "89 DH",
       entryPrice: "20 DH",
       entryNote: "(+2ans / +90cm)",
       features: [
-        "Cinéma 6D",
         "Kontiki / Bateau pirates",
         "Coco piloto",
         "Loco loco",
@@ -57,7 +56,7 @@ const ForfeitsSection = () => {
       ],
       color: "from-yellow-400 to-amber-500",
       note: "Entrée + Accès Illimité",
-      count: "16 Attractions"
+      count: "15 Attractions"
     },
     {
       title: "PASS AVENTURES",
@@ -376,8 +375,8 @@ const ForfeitsSection = () => {
                   <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-yellow-400 to-amber-500 text-white mx-auto mb-3">
                     <span className="text-lg font-bold">1</span>
                   </div>
-                  <div className="font-montserrat text-base font-bold text-amber-900 mb-1">PASS MANÈGES</div>
-                  <div className="font-montserrat text-xs text-amber-700 mb-2">16 attractions</div>
+                  <div className="font-montserrat text-base font-bold text-amber-900 mb-1">PASS MAXI FUN</div>
+                  <div className="font-montserrat text-xs text-amber-700 mb-2">15 attractions</div>
                   <div className="text-xs bg-yellow-100 text-amber-800 px-2 py-1 rounded-full font-semibold">Accès illimité</div>
                 </div>
                 

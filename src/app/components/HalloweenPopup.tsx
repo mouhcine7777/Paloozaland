@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Sparkles } from 'lucide-react';
+import { X, Moon } from 'lucide-react';
 
-const NoelPopup = () => {
+const RamadanPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -21,10 +21,10 @@ const NoelPopup = () => {
 
   const handleNavigate = () => {
     setIsOpen(false);
-    // Scroll to Noel section
-    const noelSection = document.getElementById('noel-section');
-    if (noelSection) {
-      noelSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Scroll to Ramadan section
+    const ramadanSection = document.getElementById('ramadan-section');
+    if (ramadanSection) {
+      ramadanSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -42,29 +42,6 @@ const NoelPopup = () => {
             onClick={handleClose}
           />
 
-          {/* Snowflakes Animation */}
-          <div className="fixed inset-0 z-50 pointer-events-none">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                initial={{ y: -20, x: Math.random() * window.innerWidth, opacity: 0 }}
-                animate={{
-                  y: window.innerHeight + 20,
-                  opacity: [0, 1, 1, 0],
-                }}
-                transition={{
-                  duration: Math.random() * 3 + 5,
-                  repeat: Infinity,
-                  delay: Math.random() * 5,
-                  ease: "linear"
-                }}
-                className="absolute text-white text-xl"
-              >
-                ❄
-              </motion.div>
-            ))}
-          </div>
-
           {/* Popup */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -73,13 +50,13 @@ const NoelPopup = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="fixed left-1/2 top-1/2 z-50 w-[90%] max-w-xl -translate-x-1/2 -translate-y-1/2"
           >
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-red-950 via-black to-red-950 shadow-2xl">
-              {/* Sparkle decorations */}
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-950 via-black to-indigo-950 shadow-2xl">
+              {/* Moon decorations */}
               <div className="absolute top-4 left-4 text-yellow-300 animate-pulse">
-                <Sparkles className="h-6 w-6" />
+                <Moon className="h-6 w-6" />
               </div>
               <div className="absolute top-4 right-16 text-yellow-300 animate-pulse" style={{ animationDelay: '0.5s' }}>
-                <Sparkles className="h-5 w-5" />
+                <Moon className="h-5 w-5" />
               </div>
 
               {/* Close Button */}
@@ -94,8 +71,8 @@ const NoelPopup = () => {
               {/* Image */}
               <div className="relative h-48 sm:h-56 md:h-72 w-full">
                 <img
-                  src="/noelpopup.jpg"
-                  alt="Événement de Noël"
+                  src="/ramadanpopup.jpg"
+                  alt="Ramadan au Palooza Park"
                   className="h-full w-full object-cover"
                 />
                 {/* Gradient overlay */}
@@ -110,47 +87,38 @@ const NoelPopup = () => {
                   transition={{ delay: 0.2 }}
                   className="mb-3 font-dinosaur text-2xl sm:text-3xl md:text-4xl text-white drop-shadow-lg whitespace-nowrap"
                 >
-                  Noël au Palooza Park
+                  Ramadan au Palooza Park
                 </motion.h2>
 
                 <motion.h3
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.25 }}
-                  className="mb-3 font-montserrat text-lg sm:text-xl font-bold text-red-400"
+                  className="mb-4 font-montserrat text-base sm:text-lg font-bold text-yellow-400"
                 >
-                  Les Merveilles Jurassiques débarquent au Palooza Park ! 
+                  Horaires spéciaux pendant le Ramadan
                 </motion.h3>
 
-                <motion.p
+                {/* Schedule */}
+                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  className="mb-4 font-montserrat text-gray-300 text-sm sm:text-base"
+                  className="mb-6 font-montserrat text-sm sm:text-base text-left space-y-2 bg-white/5 rounded-xl p-4"
                 >
-                  Profitez d'animations de Noël, dinosaures lumineux et offres spéciales pour une expérience magique en famille
-                </motion.p>
-
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.35 }}
-                  className="mb-6 font-montserrat text-white text-base sm:text-lg font-semibold"
-                >
-                  06 décembre 2025 au 18 janvier 2026
-                </motion.p>
-
-                <motion.button
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={handleNavigate}
-                  className="rounded-full bg-gradient-to-r from-red-600 to-red-500 px-8 py-3 font-montserrat font-bold text-white shadow-lg hover:shadow-red-500/50 transition-shadow"
-                >
-                  Découvrir nos offres
-                </motion.button>
+                  <div className="flex items-start gap-2 text-gray-300">
+                    <span className="text-yellow-400 mt-0.5">•</span>
+                    <span><span className="text-white font-semibold">21 fév – 08 mars :</span> 12h00 – 17h00 &amp; 21h00 – 23h00</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-gray-300">
+                    <span className="text-yellow-400 mt-0.5">•</span>
+                    <span><span className="text-white font-semibold">09 mars – 13 mars :</span> Fermeture du parc</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-gray-300">
+                    <span className="text-yellow-400 mt-0.5">•</span>
+                    <span><span className="text-white font-semibold">14 mars – fin du Ramadan :</span> 12h00 – 17h00 &amp; 21h00 – 23h00</span>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -160,4 +128,4 @@ const NoelPopup = () => {
   );
 };
 
-export default NoelPopup;
+export default RamadanPopup;

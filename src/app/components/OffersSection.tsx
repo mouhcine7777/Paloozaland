@@ -1,59 +1,28 @@
 "use client";
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Moon, Star, Tag } from 'lucide-react';
 
-const NoelSection = () => {
-  const offers = [
-    {
-      title: "Fun & Food – Spécial Fin d'Année",
-      price: "109 DH",
-      description: "Une formule gourmande et amusante pour les familles !",
-      subdescription: "Accès aux attractions + Menu enfant ou goûter"
-    },
-    {
-      title: "All Inclusive Gourmand",
-      price: "209 DH",
-      description: "L'expérience Palooza complète !",
-      subdescription: "Attractions + Aventures + VR + 1 crêpe ou gaufre offerte"
-    },
-    {
-      title: "Winter Family Pack",
-      price: "320 DH",
-      description: "Le pack idéal pour les sorties en famille !",
-      subdescription: "4 accès attractions + Photo souvenir digitale offerte"
-    },
-    {
-      title: "Duo Magic Pass",
-      price: "179 DH",
-      description: "Un moment à partager à deux !",
-      subdescription: "2 accès attractions + Goûter à partager"
-    },
-    {
-      title: "Magic Weekend Pass",
-      price: "159 DH",
-      description: "Un week-end rempli d'aventure !",
-      subdescription: "Accès illimité aux attractions sur 2 jours consécutifs + Photo souvenir digitale offerte"
-    }
-  ];
-
+const RamadanSection = () => {
   return (
-    <div id="noel-section" className="relative w-full overflow-hidden bg-gradient-to-br from-black via-red-950 to-black py-8 md:py-12 lg:py-16 xl:py-20 lg:min-h-screen">
-      <div className="container mx-auto h-full px-4 sm:px-6 md:px-8">
-        <div className="grid h-full grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
-          
-          {/* Left Side - Single Image */}
-          <div className="relative h-[500px] sm:h-[550px] md:h-[600px] lg:h-[600px] xl:h-[700px] w-full order-1 lg:order-1">
-            <div className="relative h-full w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl">
+    <div id="ramadan-section" className="relative w-full overflow-hidden bg-gradient-to-br from-black via-indigo-950 to-black py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+          {/* Left Side - Image */}
+          <div className="relative h-[380px] sm:h-[450px] md:h-[500px] lg:h-[560px] w-full order-1">
+            <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/noel.jpg"
-                alt="Noël à Palooza Park"
-                className="h-full w-full object-cover lg:object-contain"
+                src="/ramadan.jpg"
+                alt="Ramadan au Palooza Park"
+                className="h-full w-full object-cover"
               />
+              {/* Subtle overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
           </div>
 
           {/* Right Side - Content */}
-          <div className="flex flex-col justify-center order-2 lg:order-2 py-4 lg:py-0">
+          <div className="flex flex-col justify-center order-2 py-4 lg:py-0">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -61,11 +30,16 @@ const NoelSection = () => {
               viewport={{ once: true }}
               className="text-center lg:text-left"
             >
-              {/* Noel Title */}
-              <motion.h2 
-                className="mb-4 md:mb-6 font-dinosaur text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white drop-shadow-lg"
+              {/* Icon + Title */}
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
+                <Moon className="h-7 w-7 text-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-300" />
+              </div>
+
+              <motion.h2
+                className="mb-4 font-dinosaur text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white drop-shadow-lg"
               >
-                OFFRES SPÉCIALES NOËL
+                OFFRE SPÉCIALE RAMADAN
               </motion.h2>
 
               <motion.div
@@ -73,74 +47,83 @@ const NoelSection = () => {
                 whileInView={{ width: "50%" }}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="h-1 bg-gradient-to-r from-red-600 to-red-500 mb-6 md:mb-8 mx-auto lg:mx-0"
+                className="h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mb-6 mx-auto lg:mx-0"
               />
 
-              {/* Subtitle */}
-              <motion.h3
+              {/* Subtitle / Description */}
+              <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true }}
-                className="mb-4 md:mb-6 font-dinosaur text-lg sm:text-xl md:text-2xl text-red-400 drop-shadow-lg"
+                className="mb-8 font-montserrat text-gray-300 text-sm sm:text-base leading-relaxed"
               >
-                Des offres magiques pour célébrer les fêtes en famille !
-              </motion.h3>
+                Célébrez ce mois sacré avec vos proches au Palooza Park ! Profitez d'une atmosphère unique et d'animations spéciales pendant tout le Ramadan, le tout à un tarif exceptionnel.
+              </motion.p>
 
-              {/* Offers List */}
-              <div className="space-y-3 sm:space-y-4 md:space-y-5 mb-6 md:mb-8">
-                {offers.map((offer, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ x: 10 }}
-                    className="bg-gradient-to-r from-red-900/30 to-transparent backdrop-blur-sm border-l-4 border-red-500 rounded-r-lg p-3 sm:p-4 shadow-lg hover:shadow-red-500/20 transition-all"
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-                      <h4 className="font-dinosaur text-base sm:text-lg md:text-xl text-white">
-                        {offer.title}
-                      </h4>
-                      <span className="font-dinosaur text-lg sm:text-xl md:text-2xl text-white mt-1 sm:mt-0">
-                        {offer.price}
-                      </span>
-                    </div>
-                    <p className="font-montserrat text-xs sm:text-sm text-gray-300 leading-relaxed">
-                      {offer.description}
-                    </p>
-                    <p className="font-montserrat font-bold text-xs sm:text-sm text-gray-200 leading-relaxed mt-1">
-                      {offer.subdescription}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Download Button */}
+              {/* Pricing Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
+                transition={{ delay: 0.5 }}
                 viewport={{ once: true }}
-                className="flex justify-center lg:justify-start"
+                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-900/60 to-black/60 border border-yellow-500/30 backdrop-blur-sm p-6 sm:p-8 mb-8 shadow-xl"
               >
-                <a
-                  href="/Programmepalooza.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-600 to-red-500 px-8 py-3 font-montserrat font-bold text-white shadow-lg hover:shadow-red-500/50 hover:scale-105 transition-all"
-                >
-                  Découvrir nos programmes
-                </a>
+                {/* Decorative stars */}
+                <div className="absolute top-3 right-4 text-yellow-400 opacity-40 text-xl">✦</div>
+                <div className="absolute bottom-3 left-4 text-yellow-400 opacity-20 text-sm">✦</div>
+
+                <div className="flex items-center gap-2 mb-4">
+                  <Tag className="h-5 w-5 text-yellow-400" />
+                  <span className="font-montserrat font-bold text-yellow-400 text-sm uppercase tracking-widest">
+                    Tarif Ramadan
+                  </span>
+                </div>
+
+                <div className="flex items-end gap-4 mb-3">
+                  {/* New price */}
+                  <div>
+                    <p className="font-montserrat text-xs text-gray-400 mb-1">À partir de</p>
+                    <span className="font-dinosaur text-5xl sm:text-6xl text-white drop-shadow-lg">
+                      69 DH
+                    </span>
+                  </div>
+                  {/* Old price */}
+                  <div className="mb-2">
+                    <span className="font-montserrat text-2xl text-gray-500 line-through">
+                      89 DH
+                    </span>
+                    <div className="mt-1 inline-block ml-2 rounded-full bg-yellow-500/20 border border-yellow-500/40 px-2 py-0.5">
+                      <span className="font-montserrat font-bold text-yellow-400 text-xs">-22%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="font-montserrat text-gray-400 text-sm">
+                  Valable pendant tout le mois de Ramadan
+                </p>
+              </motion.div>
+
+              {/* Horaires reminder */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.65 }}
+                viewport={{ once: true }}
+                className="mb-8 rounded-xl bg-white/5 border border-white/10 p-4 text-sm font-montserrat text-gray-400 space-y-1.5"
+              >
+                <p className="text-white font-semibold mb-2 flex items-center gap-2"><Moon className="h-4 w-4 text-yellow-400" /> Horaires</p>
+                <p><span className="text-gray-300">2 premiers jours :</span> Fermeture du parc</p>
+                <p><span className="text-gray-300">21 fév – 08 mars :</span> 12h00 – 17h00 &amp; 21h00 – 23h00</p>
+                <p><span className="text-gray-300">09 mars – 13 mars :</span> Fermeture du parc</p>
+                <p><span className="text-gray-300">14 mars – fin du Ramadan :</span> 12h00 – 17h00 &amp; 21h00 – 23h00</p>
               </motion.div>
             </motion.div>
           </div>
-
         </div>
       </div>
     </div>
   );
 };
 
-export default NoelSection;
+export default RamadanSection;

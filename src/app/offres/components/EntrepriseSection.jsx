@@ -1,55 +1,80 @@
+"use client";
 import { useState } from 'react';
-import { Users, Building2, PartyPopper, Download, X, Mail, Phone, Building } from 'lucide-react';
+import { Users, PartyPopper, Download, X, Mail, Building } from 'lucide-react';
+
+const SUBMIT_URL    = 'https://www.paloozaland.com/submit_form.php';
+const BROCHURE_PATH = '/brochure-entreprise.pdf';
 
 const BusinessOffersSection = () => {
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    companyName: '',
-    contactName: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+  const [showForm, setShowForm]       = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission and download
-    setIsSubmitted(true);
-    setTimeout(() => {
-      // Here you would trigger the actual PDF download
-      alert('Brochure téléchargée avec succès!');
-      setShowForm(false);
-      setIsSubmitted(false);
-      setFormData({
-        companyName: '',
-        contactName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-    }, 1000);
-  };
+  const [isLoading, setIsLoading]     = useState(false);
+  const [error, setError]             = useState('');
+  const [formData, setFormData]       = useState({
+    companyName: '', contactName: '', email: '', phone: '', message: ''
+  });
 
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (error) setError('');
+  };
+
+  const triggerDownload = () => {
+    const link = document.createElement('a');
+    link.href = BROCHURE_PATH;
+    link.download = 'Brochure-Entreprise-PaloozaPark.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const res  = await fetch(SUBMIT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'business', ...formData }),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        triggerDownload();
+        setTimeout(() => {
+          setShowForm(false);
+          setIsSubmitted(false);
+          setIsLoading(false);
+          setFormData({ companyName: '', contactName: '', email: '', phone: '', message: '' });
+        }, 2500);
+      } else {
+        setError(data.message || "Une erreur s'est produite. Veuillez réessayer.");
+        setIsLoading(false);
+      }
+    } catch {
+      setError('Impossible de joindre le serveur. Veuillez réessayer.');
+      setIsLoading(false);
+    }
+  };
+
+  const closeModal = () => {
+    if (!isLoading) {
+      setShowForm(false);
+      setError('');
+      setIsSubmitted(false);
+      setFormData({ companyName: '', contactName: '', email: '', phone: '', message: '' });
+    }
   };
 
   return (
     <>
       <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-16 h-16 text-orange-200 opacity-30 transform rotate-12">
-          <svg viewBox="0 0 24 36" fill="currentColor">
-            <path d="M6,0 C9.3,0 12,2.7 12,6 C12,9.3 9.3,12 6,12 C2.7,12 0,9.3 0,6 C0,2.7 2.7,0 6,0 Z M18,12 C21.3,12 24,14.7 24,18 C24,21.3 21.3,24 18,24 C14.7,24 12,21.3 12,18 C12,14.7 14.7,12 18,12 Z M6,24 C9.3,24 12,26.7 12,30 C12,33.3 9.3,36 6,36 C2.7,36 0,33.3 0,30 C0,26.7 2.7,24 6,24 Z" />
-          </svg>
-        </div>
-
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          {/* Section Header */}
+
+          {/* Header */}
           <div className="text-center mb-16">
             <h2 className="font-dinosaur text-5xl md:text-6xl mb-6 bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 bg-clip-text text-transparent">
               OFFRE ENTREPRISE
@@ -60,46 +85,34 @@ const BusinessOffersSection = () => {
             </p>
           </div>
 
-          {/* Benefits Section */}
+          {/* Benefits */}
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl mb-16">
             <h3 className="font-dinosaur text-4xl text-center mb-8 text-gray-800">NOS AVANTAGES</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+              {[
+                { icon: Users,       title: 'Forfaits Groupe',        desc: 'Tarifs avantageux adaptés à la taille de votre groupe', color: 'from-orange-400 to-amber-500' },
+                { icon: Building,    title: 'Espaces Privatifs',      desc: 'Zones réservées pour vos événements exclusifs',          color: 'from-cyan-500 to-blue-500' },
+                { icon: PartyPopper, title: 'Animations Sur Mesure',  desc: 'Programme personnalisé selon vos objectifs',             color: 'from-green-500 to-emerald-500' },
+                { icon: Mail,        title: 'Support Dédié',          desc: 'Un interlocuteur unique pour votre événement',           color: 'from-purple-500 to-pink-500' },
+              ].map(({ icon: Icon, title, desc, color }, i) => (
+                <div key={i} className="text-center">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h4 className="font-montserrat font-bold text-lg text-gray-800 mb-2">{title}</h4>
+                  <p className="font-montserrat text-sm text-gray-600">{desc}</p>
                 </div>
-                <h4 className="font-montserrat font-bold text-lg text-gray-800 mb-2">Forfaits Groupe</h4>
-                <p className="font-montserrat text-sm text-gray-600">Tarifs avantageux adaptés à la taille de votre groupe</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-montserrat font-bold text-lg text-gray-800 mb-2">Espaces Privatifs</h4>
-                <p className="font-montserrat text-sm text-gray-600">Zones réservées pour vos événements exclusifs</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <PartyPopper className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-montserrat font-bold text-lg text-gray-800 mb-2">Animations Sur Mesure</h4>
-                <p className="font-montserrat text-sm text-gray-600">Programme personnalisé selon vos objectifs</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="font-montserrat font-bold text-lg text-gray-800 mb-2">Support Dédié</h4>
-                <p className="font-montserrat text-sm text-gray-600">Un interlocuteur unique pour votre événement</p>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* CTA Section */}
+          {/* CTA */}
           <div className="bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl">
-            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">TÉLÉCHARGEZ NOTRE BROCHURE <br></br>OFFRE ENTREPRISE</h3>
+            <h3 className="font-dinosaur text-4xl md:text-5xl mb-4">
+              TÉLÉCHARGEZ NOTRE BROCHURE <br />OFFRE ENTREPRISE
+            </h3>
             <p className="font-montserrat text-lg mb-8 text-orange-50 max-w-2xl mx-auto">
-              Découvrez tous nos forfaits entreprises, tarifs et services dans notre brochure complète. Remplissez le formulaire pour recevoir votre brochure immédiatement.
+              Découvrez tous nos forfaits entreprises, tarifs et services dans notre brochure complète.
             </p>
             <button
               onClick={() => setShowForm(true)}
@@ -112,110 +125,68 @@ const BusinessOffersSection = () => {
         </div>
       </section>
 
-      {/* Form Modal */}
+      {/* Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-            {/* Header */}
+
             <div className="bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 p-8 text-white relative">
-              <button
-                onClick={() => setShowForm(false)}
-                className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all"
-              >
+              <button onClick={closeModal} disabled={isLoading}
+                className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all disabled:opacity-50">
                 <X className="w-6 h-6" />
               </button>
               <h3 className="font-dinosaur text-4xl mb-2">DEMANDE DE BROCHURE</h3>
               <p className="font-montserrat text-orange-50">Complétez le formulaire ci-dessous pour télécharger notre brochure entreprise</p>
             </div>
 
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="p-8">
-              <div className="space-y-6">
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">
-                    Nom de l'entreprise *
-                  </label>
-                  <input
-                    type="text"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleInputChange}
-                    required
-                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
-                    placeholder="Votre entreprise"
-                  />
+            {isSubmitted ? (
+              <div className="p-12 text-center">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Download className="w-10 h-10 text-green-600" />
                 </div>
-
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">
-                    Nom et prénom *
-                  </label>
-                  <input
-                    type="text"
-                    name="contactName"
-                    value={formData.contactName}
-                    onChange={handleInputChange}
-                    required
-                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
-                    placeholder="Votre nom complet"
-                  />
-                </div>
-
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">
-                    Email professionnel *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
-                    placeholder="email@entreprise.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="font-montserrat font-semibold text-gray-700 block mb-2">
-                    Téléphone *
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                    className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat"
-                    placeholder="+212 6XX XXX XXX"
-                  />
-                </div>
+                <h4 className="font-dinosaur text-3xl text-gray-800 mb-2">TÉLÉCHARGEMENT EN COURS</h4>
+                <p className="font-montserrat text-gray-600">Merci ! Votre brochure a été téléchargée et nous avons bien reçu vos informations.</p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="p-8">
+                <div className="space-y-6">
+                  {[
+                    { label: "Nom de l'entreprise *", name: 'companyName', type: 'text',  placeholder: 'Votre entreprise' },
+                    { label: 'Nom et prénom *',        name: 'contactName', type: 'text',  placeholder: 'Votre nom complet' },
+                    { label: 'Email professionnel *',  name: 'email',       type: 'email', placeholder: 'email@entreprise.com' },
+                    { label: 'Téléphone *',            name: 'phone',       type: 'tel',   placeholder: '+212 6XX XXX XXX' },
+                  ].map(({ label, name, type, placeholder }) => (
+                    <div key={name}>
+                      <label className="font-montserrat font-semibold text-gray-700 block mb-2">{label}</label>
+                      <input type={type} name={name} value={formData[name]} onChange={handleInputChange} required
+                        placeholder={placeholder}
+                        className="text-gray-700 w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:outline-none transition-colors font-montserrat" />
+                    </div>
+                  ))}
+                </div>
 
-              <div className="mt-8 flex gap-4">
-                <button
-                  type="button"
-                  onClick={() => setShowForm(false)}
-                  className="flex-1 px-6 py-4 rounded-full border-2 border-gray-300 text-gray-700 font-montserrat font-bold hover:bg-gray-50 transition-all"
-                >
-                  Annuler
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSubmitted}
-                  className="flex-1 px-6 py-4 rounded-full bg-gradient-to-r from-orange-600 to-amber-500 text-white font-montserrat font-bold hover:shadow-xl transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2"
-                >
-                  {isSubmitted ? (
-                    <>Téléchargement...</>
-                  ) : (
-                    <>
-                      <Download className="w-5 h-5" />
-                      Télécharger
-                    </>
-                  )}
-                </button>
-              </div>
-            </form>
+                {error && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl">
+                    <p className="font-montserrat text-sm text-red-600">{error}</p>
+                  </div>
+                )}
+
+                <div className="mt-8 flex gap-4">
+                  <button type="button" onClick={closeModal} disabled={isLoading}
+                    className="flex-1 px-6 py-4 rounded-full border-2 border-gray-300 text-gray-700 font-montserrat font-bold hover:bg-gray-50 transition-all disabled:opacity-50">
+                    Annuler
+                  </button>
+                  <button type="submit" disabled={isLoading}
+                    className="flex-1 px-6 py-4 rounded-full bg-gradient-to-r from-orange-600 to-amber-500 text-white font-montserrat font-bold hover:shadow-xl transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2">
+                    {isLoading ? (
+                      <><svg className="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/></svg>Envoi...</>
+                    ) : (
+                      <><Download className="w-5 h-5" />Télécharger</>
+                    )}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       )}

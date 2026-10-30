@@ -144,7 +144,7 @@ const TimingSection = () => {
                         16h00 – 22h00
                       </p>
                       <p className="font-montserrat text-sm text-amber-700 mt-1 opacity-80">
-                        Du lundi au vendredi
+                        Du mardi au vendredi
                       </p>
                     </div>
                   </div>

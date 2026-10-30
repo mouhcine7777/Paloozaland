@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,11 +22,11 @@ const montserrat = Montserrat({
 // ⭐ FULL SEO OPTIMIZED METADATA
 export const metadata: Metadata = {
   title: {
-    default: "Palooza Park – Parc d’Attractions à Marrakech",
+    default: "Parc d'attraction Marrakech – Parc de jeux & aqua park Maroc",
     template: "%s | Palooza Park Marrakech",
   },
   description:
-    "Palooza Park Marrakech – Parc d’attractions thématique avec dinosaures, manèges, espace enfants, restaurants et activités familiales. Découvrez nos attractions, horaires, tarifs et événements.",
+    "Découvrez Palooza Land, le parc d’attractions incontournable à Marrakech : manèges, expériences VR, piscine, aqua park, accrobranche et spectacles pour toute la famille. Vivez une journée de fun inoubliable !",
   keywords: [
     "Palooza Park",
     "Palooza Park Marrakech",
@@ -70,6 +71,18 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-19DEWNPDDE"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-19DEWNPDDE');
+          `}
+        </Script>
       </body>
     </html>
   );

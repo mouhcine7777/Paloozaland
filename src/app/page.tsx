@@ -4,21 +4,21 @@ import HeroSection from "./components/HeroSection";
 import TicketsSection from "./components/TicketsSection";
 import TimingSection from "./components/TimingSection";
 import GallerySection from "./components/GallerySection";
+import Newsletter from "./components/Newsletter";
 import FooterSection from "./components/FooterSection";
-import HalloweenPopup from "./components/HalloweenPopup";
-import OffersSection from "./components/OffersSection";
+import OffersPopup from "./components/OffersPopup";
 
 
 export default function Home() {
   return (
     <main>
-      <HalloweenPopup />
+      <OffersPopup />
       <StickyNavbar />
       <HeroSection />
-      <OffersSection />
       <TicketsSection />
       <GallerySection />
       <TimingSection />
+      <Newsletter />
       <FooterSection />
     </main>
   );

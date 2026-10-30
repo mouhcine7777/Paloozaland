@@ -59,16 +59,16 @@ const StickyNavbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'py-2 bg-black/80 shadow-lg backdrop-blur-sm' 
+          scrolled
+            ? 'py-2 bg-black/80 shadow-lg backdrop-blur-sm'
             : 'py-4 bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <motion.div 
+            <Link href="/" className="flex items-center -ml-14 md:ml-0">
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="relative h-12 w-48"
               >
@@ -86,11 +86,11 @@ const StickyNavbar = () => {
             <div className="hidden md:flex space-x-1">
               {navItems.map((item, index) => (
                 <motion.div key={index} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                  <Link 
+                  <Link
                     href={item.href}
                     className={`px-4 py-2 rounded-full text-sm font-montserrat font-bold transition-all duration-300 ${
-                      scrolled 
-                        ? 'text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-amber-400 hover:text-white' 
+                      scrolled
+                        ? 'text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-amber-400 hover:text-white'
                         : 'text-white hover:bg-white/20'
                     }`}
                   >
@@ -99,18 +99,34 @@ const StickyNavbar = () => {
                 </motion.div>
               ))}
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Link 
+                <Link
                   href="tel:+212661635095"
                   className="ml-4 px-6 py-2 bg-gradient-to-r from-orange-600 to-amber-500 text-white rounded-full font-montserrat font-bold text-sm shadow-lg"
                 >
-                  Appelez-nous 
+                  Appelez-nous
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/eng"
+                  className="ml-2 px-4 py-2 rounded-full text-sm font-montserrat font-bold border border-white/40 text-white hover:bg-white/20 transition-all duration-300"
+                >
+                  EN
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/ar"
+                  className="ml-2 px-4 py-2 rounded-full text-sm font-montserrat font-bold border border-white/40 text-white hover:bg-white/20 transition-all duration-300"
+                >
+                  AR
                 </Link>
               </motion.div>
             </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button 
+              <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="flex items-center px-3 py-2 rounded text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
                 aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
@@ -152,14 +168,14 @@ const StickyNavbar = () => {
           >
             <div className="px-4 py-4">
               {navItems.map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   className="py-2"
                 >
-                  <Link 
+                  <Link
                     href={item.href}
                     onClick={closeMobileMenu}
                     className="block px-4 py-2 text-gray-800 font-montserrat font-medium text-lg border-l-4 border-transparent hover:border-orange-500 hover:bg-orange-50 transition-all duration-200"
@@ -175,7 +191,7 @@ const StickyNavbar = () => {
                 className="mt-4 mx-4"
               >
                 {/* Changer pour un élément <a> au lieu de <Link> pour les numéros de téléphone */}
-                <a 
+                <a
                   href="tel:+212661635095"
                   onClick={(e) => {
                     // Laisser le navigateur gérer l'appel téléphonique
@@ -183,27 +199,55 @@ const StickyNavbar = () => {
                   }}
                   className="block w-full py-3 text-center bg-gradient-to-r from-orange-600 to-amber-500 text-white rounded-lg font-montserrat font-bold shadow-md hover:from-orange-700 hover:to-amber-600 transition-all duration-200 active:scale-95"
                 >
-                  Appelez-nous 
+                  Appelez-nous
                 </a>
               </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: (navItems.length + 1) * 0.1 }}
+                className="mt-3 mx-4"
+              >
+                <Link
+                  href="/eng"
+                  onClick={closeMobileMenu}
+                  className="block w-full py-3 text-center border-2 border-orange-500 text-orange-600 rounded-lg font-montserrat font-bold hover:bg-orange-50 transition-all duration-200 active:scale-95"
+                >
+                  English
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: (navItems.length + 2) * 0.1 }}
+                className="mt-3 mx-4"
+              >
+                <Link
+                  href="/ar"
+                  onClick={closeMobileMenu}
+                  className="block w-full py-3 text-center border-2 border-orange-500 text-orange-600 rounded-lg font-montserrat font-bold hover:bg-orange-50 transition-all duration-200 active:scale-95"
+                >
+                  العربية
+                </Link>
+              </motion.div>
             </div>
-            
+
             {/* Decorative elements */}
-            <svg 
+            <svg
               className="absolute bottom-0 left-0 right-0 text-orange-500 opacity-10 pointer-events-none"
-              xmlns="http://www.w3.org/2000/svg" 
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
             >
-              <path 
-                fill="currentColor" 
-                fillOpacity="1" 
+              <path
+                fill="currentColor"
+                fillOpacity="1"
                 d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
             </svg>
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       {/* Fancy scroll indicator - only visible when not scrolled */}
       <AnimatePresence>
         {!scrolled && (

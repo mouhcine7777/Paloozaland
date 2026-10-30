@@ -1,3 +1,4 @@
+"use client";
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 
@@ -287,7 +288,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-montserrat font-bold text-lg text-gray-800 mb-1">Adresse</h4>
                     <p className="font-montserrat text-gray-600">
-                      Palooza Land, Route d'Amizmiz<br />
+                      Palooza Land, Bd Allal Al Fassi<br />
                       Marrakech, Maroc
                     </p>
                   </div>

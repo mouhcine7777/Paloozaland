@@ -47,10 +47,10 @@ const FooterSection = () => {
     <footer className="relative bg-gray-900 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div 
+        <div
           className="w-full h-full"
           style={{
-            backgroundImage: 'url(/footer.jpg)',
+            backgroundImage: 'url(/Footer.jpg)',
             backgroundRepeat: 'repeat',
             backgroundSize: 'auto'
           }}
@@ -60,7 +60,7 @@ const FooterSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          
+
           {/* Logo and Description */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ const FooterSection = () => {
           >
             <div className="mb-6">
               <Image
-                src="/logowhite.png"
+                src="/paloozalogowhite.png"
                 alt="Palooza Park Logo"
                 width={200}
                 height={60}
@@ -79,7 +79,7 @@ const FooterSection = () => {
               />
             </div>
             <p className="text-gray-300 font-montserrat text-sm leading-relaxed max-w-sm">
-              Découvrez un monde préhistorique extraordinaire où l'aventure et l'éducation se rencontrent. 
+              Découvrez un monde préhistorique extraordinaire où l'aventure et l'éducation se rencontrent.
               <br></br>Une expérience inoubliable pour toute la famille.
             </p>
           </motion.div>
@@ -96,7 +96,7 @@ const FooterSection = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-orange-400 font-montserrat text-sm transition-colors duration-300"
                   >
@@ -134,7 +134,7 @@ const FooterSection = () => {
             </div>
             <div className="text-gray-300 font-montserrat text-sm space-y-1">
               <p>📍  Bd Allal Al Fassi, Marrakech, Maroc</p>
-              <p>📞 +212 661-635095</p>
+              <p>📞 +212 661-635095 | +212 610-202690</p>
               <p>✉️ contact@paloozaland.com</p>
             </div>
           </motion.div>
@@ -155,11 +155,31 @@ const FooterSection = () => {
           </div>
         </motion.div>
 
+        {/* Structured data: credits the site's developer for search engines */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Palooza Park',
+              url: 'https://www.paloozaland.com/',
+              creator: {
+                '@type': 'Person',
+                name: 'Mouhcine Zhirou',
+                jobTitle: 'Développeur Web Freelance',
+                url: 'https://www.mouhcinezhirou.com/',
+                sameAs: ['https://www.mouhcinezhirou.com/'],
+              },
+            }),
+          }}
+        />
+
         {/* Decorative Dino Silhouettes */}
         <div className="absolute bottom-0 right-0 opacity-5 pointer-events-none">
           <svg width="200" height="100" viewBox="0 0 200 100" className="text-white">
-            <path 
-              fill="currentColor" 
+            <path
+              fill="currentColor"
               d="M10,80 Q20,60 40,65 Q60,70 80,60 Q100,50 120,55 Q140,60 160,50 Q180,40 190,45 L190,100 L10,100 Z"
             />
           </svg>

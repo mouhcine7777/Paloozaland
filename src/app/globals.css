@@ -35,8 +35,14 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'BeeatyWeather';
+  src: url('/font/BeeatyWeather.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 .font-dinosaur {
-  font-family: 'Dinosaur', sans-serif;
+  font-family: 'Dinosaur', 'BeeatyWeather', sans-serif;
 }
 @font-face {
   font-family: 'Halloween';

@@ -75,7 +75,7 @@ const SchoolOffersSection = () => {
 
   const attractionFeatures  = [
     { title: 'ALL INCLUSIVE PASS', desc: 'Complete Experience' },
-    { title: 'MAXI FUN PASS',      desc: '15 attractions' },
+    { title: 'MAXI FUN PASS',      desc: '14 attractions' },
     { title: 'ADVENTURE PASS',     desc: '4 adventures' },
     { title: 'VR CLUB PASS',       desc: '3 VR experiences' },
   ];

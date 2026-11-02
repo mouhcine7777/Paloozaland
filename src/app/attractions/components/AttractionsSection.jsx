@@ -48,14 +48,6 @@ const AttractionsSection = () => {
       heightRange: "110-140cm"
     },
     {
-      id: 6,
-      name: "Sky Glider",
-      category: "maneges",
-      description: "Survolez le parc et laissez-vous porter par les sensations du Sky Glider!",
-      image: "/gallery/skyglider.jpg",
-      heightRange: "110-140cm"
-    },
-    {
       id: 7,
       name: "Looping Bike",
       category: "maneges",

@@ -51,12 +51,11 @@ const ForfeitsSection = () => {
         "L'orient express",
         "Looping bike",
         "Waikiki",
-        "Trampoline",
-        "Sky glider"
+        "Trampoline"
       ],
       color: "from-yellow-400 to-amber-500",
       note: "Entrée + Accès Illimité",
-      count: "15 Attractions"
+      count: "14 Attractions"
     },
     {
       title: "PASS AVENTURES",
@@ -376,7 +375,7 @@ const ForfeitsSection = () => {
                     <span className="text-lg font-bold">1</span>
                   </div>
                   <div className="font-montserrat text-base font-bold text-amber-900 mb-1">PASS MAXI FUN</div>
-                  <div className="font-montserrat text-xs text-amber-700 mb-2">15 attractions</div>
+                  <div className="font-montserrat text-xs text-amber-700 mb-2">14 attractions</div>
                   <div className="text-xs bg-yellow-100 text-amber-800 px-2 py-1 rounded-full font-semibold">Accès illimité</div>
                 </div>
                 

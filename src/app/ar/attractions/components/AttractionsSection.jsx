@@ -48,14 +48,6 @@ const AttractionsSection = () => {
       heightRange: "110-140 سم"
     },
     {
-      id: 6,
-      name: "Sky Glider",
-      category: "maneges",
-      description: "حلّق فوق البارك واستمتع بالإثارة ديال سكاي غلايدر!",
-      image: "/gallery/skyglider.jpg",
-      heightRange: "110-140 سم"
-    },
-    {
       id: 7,
       name: "Looping Bike",
       category: "maneges",

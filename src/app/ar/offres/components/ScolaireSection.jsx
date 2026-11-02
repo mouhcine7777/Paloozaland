@@ -75,7 +75,7 @@ const SchoolOffersSection = () => {
 
   const attractionFeatures  = [
     { title: 'العرض الشامل',   desc: 'تجربة كاملة' },
-    { title: 'PASS MAXI FUN',  desc: '15 لعبة' },
+    { title: 'PASS MAXI FUN',  desc: '14 لعبة' },
     { title: 'PASS AVENTURES', desc: '4 مغامرات' },
     { title: 'PASS VR CLUB',   desc: '3 تجارب فالواقع الافتراضي' },
   ];
